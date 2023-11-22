@@ -22,7 +22,7 @@ namespace CarParking
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="LoginDB")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="loginCP")]
 	public partial class DataloginDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -36,7 +36,7 @@ namespace CarParking
     #endregion
 		
 		public DataloginDataContext() : 
-				base(global::CarParking.Properties.Settings.Default.LoginDBConnectionString, mappingSource)
+				base(global::CarParking.Properties.Settings.Default.loginCPConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
