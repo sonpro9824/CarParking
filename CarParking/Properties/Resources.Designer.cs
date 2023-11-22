@@ -73,6 +73,16 @@ namespace CarParking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap car1_83961 {
+            get {
+                object obj = ResourceManager.GetObject("car1_83961", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap parking_background {
             get {
                 object obj = ResourceManager.GetObject("parking-background", resourceCulture);

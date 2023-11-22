@@ -13,6 +13,8 @@ namespace CarParking
 {
     public partial class Form_Login : Form
     {
+        bool[] check = new bool[100];
+        
         login nv; 
         DataloginDataContext db; 
         public Form_Login()
@@ -33,6 +35,10 @@ namespace CarParking
 
         private void Form_Login_Load(object sender, EventArgs e)
         {
+            for (int i = 0; i < 100; i++)
+            {
+                check[i] = false;
+            }
             nv = new login();
             db = new DataloginDataContext();
             panel_sign.Hide();
@@ -70,6 +76,11 @@ namespace CarParking
 
         private void button_signS_Click(object sender, EventArgs e)
         {
+            if(text_mailS.Text.Contains("@gmail.com")== false)
+            {
+                MessageBox.Show("sai gmail");
+                return;
+            }
             if (text_mailS.Text == string.Empty || text_userS.Text == string.Empty || text_passS.Text == string.Empty)
             {
                 MessageBox.Show("khong duoc de trong");
@@ -77,17 +88,26 @@ namespace CarParking
             }
             Random random = new Random();
             int randomNumber = random.Next(1, 101);
-            bool check = true;
+            bool checklop = true;
             do
             {
-                var i = (from s in db.logins where s.Id == randomNumber select s);
-                if (i != null)
-                    check = false;
+                
+                if (check[randomNumber] == false)
+                {
+                    check[randomNumber] = true;
+                    checklop = false;
+                }
                 else
                     randomNumber = random.Next(1, 101);
-            } while (check);
+            } while (checklop);
             try
             {
+                var i = db.logins.Where(s => s.user == text_userS.Text ).FirstOrDefault();
+                if (i!=null)
+                {
+                    MessageBox.Show("Ten da ton tai");
+                    return;
+                }
                 if (text_passS.Text == text_passS2.Text)
                 {
                     nv.Id = randomNumber;
