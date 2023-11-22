@@ -47,19 +47,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attendant.cs" />
+    <Compile Include="Customer.cs" />
     <Compile Include="Datalogin.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Datalogin.dbml</DependentUpon>
     </Compile>
+    <Compile Include="HandlePayment.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageParkingSpace.cs" />
+    <Compile Include="Manager.cs" />
+    <Compile Include="ParkCar.cs" />
+    <Compile Include="ParkingSpace.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RetrieveCar.cs" />
+    <Compile Include="ViewReport.cs" />
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +100,7 @@
     <None Include="Datalogin.dbml.layout">
       <DependentUpon>Datalogin.dbml</DependentUpon>
     </None>
+    <None Include="LogicDiagram.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

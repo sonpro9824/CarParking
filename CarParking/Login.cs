@@ -154,5 +154,10 @@ namespace CarParking
         {
 
         }
+
+        private void text_user_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
