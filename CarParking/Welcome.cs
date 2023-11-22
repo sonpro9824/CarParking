@@ -19,7 +19,7 @@ namespace CarParking
 
         private void Welcome_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello ");
+            
         }
     }
 }

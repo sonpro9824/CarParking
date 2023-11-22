@@ -30,6 +30,7 @@ namespace CarParking
         private void button2_Click(object sender, EventArgs e)
         {
             panel1.Hide();
+            Panel_Role.Show();
             panel_sign.Show();
         }
 
@@ -56,8 +57,11 @@ namespace CarParking
                     {
                         //MessageBox.Show("Yeah sirrr");
                         this.Hide();
+                        string output = "Welcome back, " + i.role;
+                        MessageBox.Show(output);
                         Welcome welcome = new Welcome();
                         welcome.Show();
+                       
                     }
                     else
                     {
@@ -84,6 +88,11 @@ namespace CarParking
             if (text_mailS.Text == string.Empty || text_userS.Text == string.Empty || text_passS.Text == string.Empty)
             {
                 MessageBox.Show("khong duoc de trong");
+                return;
+            }
+            if (!Button_QuanLy.Checked && !Button_Attendant.Checked && !Button_Customer.Checked)
+            {
+                MessageBox.Show("You have not set your role!");
                 return;
             }
             Random random = new Random();
@@ -114,6 +123,18 @@ namespace CarParking
                     nv.email = text_mailS.Text;
                     nv.user = text_userS.Text;
                     nv.pass = text_passS.Text;
+                    if (Button_QuanLy.Checked)
+                    {
+                        nv.role = "Manager";
+                    }
+                    else if (Button_Attendant.Checked)
+                    {
+                        nv.role = "Attendant";
+                    }
+                    else if (Button_Customer.Checked)
+                    {
+                        nv.role = "Customer";
+                    }
                     db.logins.InsertOnSubmit(nv);
                     db.SubmitChanges();
                     MessageBox.Show("Done! Go back Login");
@@ -122,15 +143,16 @@ namespace CarParking
                     
                     text_pass.Text = text_passS2.Text;
                     panel1.Show();
+                    Panel_Role.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Erorr comfirm");
+                    MessageBox.Show("Error comfirm");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Erorr");
+                MessageBox.Show(ex.Message, "Error");
             }
             
         }

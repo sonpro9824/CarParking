@@ -7,13 +7,14 @@ using System.Xml.Linq;
 
 namespace CarParking
 {
+   
     public class Manager_Information : Person
     {
         public Manager_Information()
         {
         }
 
-        public Manager_Information(string name, string contactInfor) : base(name, contactInfor)
+        public Manager_Information(int ID, string name, string contactInfor) : base(ID, name, contactInfor)
         {
         }
 
@@ -22,5 +23,9 @@ namespace CarParking
             string output = "Manager information\nName: " + Name + "\nContact infomation: " + ContactInfor;
             return output;
         }
+    }
+    public class Manager_G_ID
+    {
+        public static int gID = 0;
     }
 }

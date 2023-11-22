@@ -7,7 +7,7 @@ namespace CarParking
 {
     public class Attendant_Information : Person
     {
-        public Attendant_Information(string name, string contactInfor) : base(name, contactInfor)
+        public Attendant_Information(int ID, string name, string contactInfor) : base(ID, name, contactInfor)
         {
 
         }

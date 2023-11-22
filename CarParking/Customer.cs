@@ -16,7 +16,7 @@ namespace CarParking
         {
         }
 
-        public Customer_Information(string name, string contactInfor, string car_ID, DateTime date_come, DateTime date_leave, string payment_method) : base(name, contactInfor)
+        public Customer_Information(int ID, string name, string contactInfor,string car_ID, DateTime date_come, DateTime date_leave, string payment_method) : base(ID ,name, contactInfor)
         {
             this.Car_ID = car_ID;
             this.Date_come = date_come;

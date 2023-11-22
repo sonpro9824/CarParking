@@ -6,6 +6,7 @@
       <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="[user]" Member="user" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="pass" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="role" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

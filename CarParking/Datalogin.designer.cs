@@ -88,6 +88,8 @@ namespace CarParking
 		
 		private string _pass;
 		
+		private string _role;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -100,6 +102,8 @@ namespace CarParking
     partial void OnuserChanged();
     partial void OnpassChanging(string value);
     partial void OnpassChanged();
+    partial void OnroleChanging(string value);
+    partial void OnroleChanged();
     #endregion
 		
 		public login()
@@ -183,6 +187,26 @@ namespace CarParking
 					this._pass = value;
 					this.SendPropertyChanged("pass");
 					this.OnpassChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_role", DbType="NVarChar(50)")]
+		public string role
+		{
+			get
+			{
+				return this._role;
+			}
+			set
+			{
+				if ((this._role != value))
+				{
+					this.OnroleChanging(value);
+					this.SendPropertyChanging();
+					this._role = value;
+					this.SendPropertyChanged("role");
+					this.OnroleChanged();
 				}
 			}
 		}

@@ -52,8 +52,10 @@
             this.Button_QuanLy = new System.Windows.Forms.RadioButton();
             this.Button_Attendant = new System.Windows.Forms.RadioButton();
             this.Button_Customer = new System.Windows.Forms.RadioButton();
+            this.Panel_Role = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel_sign.SuspendLayout();
+            this.Panel_Role.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -297,7 +299,7 @@
             this.Button_QuanLy.BackColor = System.Drawing.Color.Transparent;
             this.Button_QuanLy.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
             this.Button_QuanLy.ForeColor = System.Drawing.Color.White;
-            this.Button_QuanLy.Location = new System.Drawing.Point(74, 219);
+            this.Button_QuanLy.Location = new System.Drawing.Point(40, 12);
             this.Button_QuanLy.Name = "Button_QuanLy";
             this.Button_QuanLy.Size = new System.Drawing.Size(94, 25);
             this.Button_QuanLy.TabIndex = 5;
@@ -312,7 +314,7 @@
             this.Button_Attendant.BackColor = System.Drawing.Color.Transparent;
             this.Button_Attendant.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
             this.Button_Attendant.ForeColor = System.Drawing.Color.White;
-            this.Button_Attendant.Location = new System.Drawing.Point(74, 273);
+            this.Button_Attendant.Location = new System.Drawing.Point(39, 65);
             this.Button_Attendant.Name = "Button_Attendant";
             this.Button_Attendant.Size = new System.Drawing.Size(101, 25);
             this.Button_Attendant.TabIndex = 6;
@@ -326,13 +328,25 @@
             this.Button_Customer.BackColor = System.Drawing.Color.Transparent;
             this.Button_Customer.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
             this.Button_Customer.ForeColor = System.Drawing.Color.White;
-            this.Button_Customer.Location = new System.Drawing.Point(74, 336);
+            this.Button_Customer.Location = new System.Drawing.Point(40, 118);
             this.Button_Customer.Name = "Button_Customer";
             this.Button_Customer.Size = new System.Drawing.Size(100, 25);
             this.Button_Customer.TabIndex = 7;
             this.Button_Customer.TabStop = true;
             this.Button_Customer.Text = "Customer";
             this.Button_Customer.UseVisualStyleBackColor = false;
+            // 
+            // Panel_Role
+            // 
+            this.Panel_Role.BackColor = System.Drawing.Color.Transparent;
+            this.Panel_Role.Controls.Add(this.Button_QuanLy);
+            this.Panel_Role.Controls.Add(this.Button_Customer);
+            this.Panel_Role.Controls.Add(this.Button_Attendant);
+            this.Panel_Role.Location = new System.Drawing.Point(41, 199);
+            this.Panel_Role.Name = "Panel_Role";
+            this.Panel_Role.Size = new System.Drawing.Size(200, 159);
+            this.Panel_Role.TabIndex = 8;
+            this.Panel_Role.Visible = false;
             // 
             // Form_Login
             // 
@@ -341,9 +355,7 @@
             this.BackgroundImage = global::CarParking.Properties.Resources.parking_background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(826, 486);
-            this.Controls.Add(this.Button_Customer);
-            this.Controls.Add(this.Button_Attendant);
-            this.Controls.Add(this.Button_QuanLy);
+            this.Controls.Add(this.Panel_Role);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -352,12 +364,15 @@
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form_Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel_sign.ResumeLayout(false);
             this.panel_sign.PerformLayout();
+            this.Panel_Role.ResumeLayout(false);
+            this.Panel_Role.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,6 +403,7 @@
         private System.Windows.Forms.RadioButton Button_QuanLy;
         private System.Windows.Forms.RadioButton Button_Attendant;
         private System.Windows.Forms.RadioButton Button_Customer;
+        private System.Windows.Forms.Panel Panel_Role;
     }
 }
 
