@@ -36,7 +36,7 @@ namespace CarParking
             nv = new login();
             db = new DataloginDataContext();
             panel_sign.Hide();
-            text_pass.Hide();
+            
         }
 
         private void button_login_Click(object sender, EventArgs e)
@@ -99,7 +99,7 @@ namespace CarParking
                     MessageBox.Show("Done! Go back Login");
                     panel_sign.Hide();
                     text_user.Text = text_userS.Text;
-                    text_pass_fake.Text = text_passS.Text;
+                    
                     text_pass.Text = text_passS2.Text;
                     panel1.Show();
                 }
@@ -130,25 +130,7 @@ namespace CarParking
             
         }
 
-        private void text_pass_fake_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if(text_pass_fake.Text == string.Empty)
-                    text_pass.Text = string.Empty;
-                if(text_pass_fake.Text[text_pass_fake.Text.Length - 1] != '*')
-                    text_pass.Text += text_pass_fake.Text[text_pass_fake.Text.Length - 1];
-
-                string input = text_pass_fake.Text;
-                string maske = new string('*', input.Length);
-                text_pass_fake.Text = maske;
-                text_pass_fake.SelectionStart = text_pass_fake.Text.Length;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Erorr");
-            }
-        }
+        
 
         private void text_mailS_TextChanged(object sender, EventArgs e)
         {

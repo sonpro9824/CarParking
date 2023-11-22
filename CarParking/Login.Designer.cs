@@ -33,7 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.text_pass_fake = new System.Windows.Forms.TextBox();
             this.button_sign = new System.Windows.Forms.Button();
             this.button_login = new System.Windows.Forms.Button();
             this.text_pass = new System.Windows.Forms.TextBox();
@@ -95,7 +94,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.text_pass_fake);
             this.panel1.Controls.Add(this.button_sign);
             this.panel1.Controls.Add(this.button_login);
             this.panel1.Controls.Add(this.text_pass);
@@ -106,14 +104,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(336, 214);
             this.panel1.TabIndex = 3;
-            // 
-            // text_pass_fake
-            // 
-            this.text_pass_fake.Location = new System.Drawing.Point(116, 74);
-            this.text_pass_fake.Name = "text_pass_fake";
-            this.text_pass_fake.Size = new System.Drawing.Size(192, 22);
-            this.text_pass_fake.TabIndex = 6;
-            this.text_pass_fake.TextChanged += new System.EventHandler(this.text_pass_fake_TextChanged);
             // 
             // button_sign
             // 
@@ -149,6 +139,7 @@
             // 
             this.text_pass.Location = new System.Drawing.Point(116, 74);
             this.text_pass.Name = "text_pass";
+            this.text_pass.PasswordChar = '*';
             this.text_pass.Size = new System.Drawing.Size(192, 22);
             this.text_pass.TabIndex = 3;
             this.text_pass.TextChanged += new System.EventHandler(this.text_pass_TextChanged);
@@ -345,7 +336,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox text_mailS;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox text_pass_fake;
     }
 }
 
