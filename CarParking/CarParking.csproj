@@ -79,6 +79,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Datalogin.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>Datalogin.designer.cs</LastGenOutput>

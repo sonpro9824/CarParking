@@ -16,5 +16,10 @@ namespace CarParking
         {
             InitializeComponent();
         }
+
+        private void Welcome_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello world");
+        }
     }
 }
