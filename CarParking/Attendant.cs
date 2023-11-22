@@ -10,6 +10,7 @@ namespace CarParking
 
         public Attendant(string name, string contactInfor) : base(name, contactInfor)
         {
+
         }
 
         public override void PrinfDetail()
