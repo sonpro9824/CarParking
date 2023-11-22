@@ -141,5 +141,10 @@ namespace CarParking
         {
 
         }
+
+        private void Button_QuanLy_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

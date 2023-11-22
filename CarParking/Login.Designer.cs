@@ -49,6 +49,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.text_mailS = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.Button_QuanLy = new System.Windows.Forms.RadioButton();
+            this.Button_Attendant = new System.Windows.Forms.RadioButton();
+            this.Button_Customer = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel_sign.SuspendLayout();
             this.SuspendLayout();
@@ -288,6 +291,49 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "Email: ";
             // 
+            // Button_QuanLy
+            // 
+            this.Button_QuanLy.AutoSize = true;
+            this.Button_QuanLy.BackColor = System.Drawing.Color.Transparent;
+            this.Button_QuanLy.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.Button_QuanLy.ForeColor = System.Drawing.Color.White;
+            this.Button_QuanLy.Location = new System.Drawing.Point(74, 219);
+            this.Button_QuanLy.Name = "Button_QuanLy";
+            this.Button_QuanLy.Size = new System.Drawing.Size(94, 25);
+            this.Button_QuanLy.TabIndex = 5;
+            this.Button_QuanLy.TabStop = true;
+            this.Button_QuanLy.Text = "Manager";
+            this.Button_QuanLy.UseVisualStyleBackColor = false;
+            this.Button_QuanLy.CheckedChanged += new System.EventHandler(this.Button_QuanLy_CheckedChanged);
+            // 
+            // Button_Attendant
+            // 
+            this.Button_Attendant.AutoSize = true;
+            this.Button_Attendant.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Attendant.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.Button_Attendant.ForeColor = System.Drawing.Color.White;
+            this.Button_Attendant.Location = new System.Drawing.Point(74, 273);
+            this.Button_Attendant.Name = "Button_Attendant";
+            this.Button_Attendant.Size = new System.Drawing.Size(101, 25);
+            this.Button_Attendant.TabIndex = 6;
+            this.Button_Attendant.TabStop = true;
+            this.Button_Attendant.Text = "Attendant";
+            this.Button_Attendant.UseVisualStyleBackColor = false;
+            // 
+            // Button_Customer
+            // 
+            this.Button_Customer.AutoSize = true;
+            this.Button_Customer.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Customer.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.Button_Customer.ForeColor = System.Drawing.Color.White;
+            this.Button_Customer.Location = new System.Drawing.Point(74, 336);
+            this.Button_Customer.Name = "Button_Customer";
+            this.Button_Customer.Size = new System.Drawing.Size(100, 25);
+            this.Button_Customer.TabIndex = 7;
+            this.Button_Customer.TabStop = true;
+            this.Button_Customer.Text = "Customer";
+            this.Button_Customer.UseVisualStyleBackColor = false;
+            // 
             // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -295,6 +341,9 @@
             this.BackgroundImage = global::CarParking.Properties.Resources.parking_background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(826, 486);
+            this.Controls.Add(this.Button_Customer);
+            this.Controls.Add(this.Button_Attendant);
+            this.Controls.Add(this.Button_QuanLy);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -336,6 +385,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox text_mailS;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RadioButton Button_QuanLy;
+        private System.Windows.Forms.RadioButton Button_Attendant;
+        private System.Windows.Forms.RadioButton Button_Customer;
     }
 }
 

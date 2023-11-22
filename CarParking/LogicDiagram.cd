@@ -1,69 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="CarParking.Manager" Collapsed="true">
+  <Class Name="CarParking.Manager">
     <Position X="0.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAACAAIAAkAAAAAAAACAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>Manager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="CarParking.ParkingSpace" Collapsed="true">
+  <Class Name="CarParking.ParkingSpace">
     <Position X="5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ParkingSpace.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="CarParking.Person" Collapsed="true">
-    <Position X="0.5" Y="2" Width="1.5" />
+  <Class Name="CarParking.Person">
+    <Position X="7.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAEAAAAAYAAAAGAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Person.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="CarParking.Customer" Collapsed="true">
-    <Position X="2.5" Y="2.75" Width="1.5" />
+  <Class Name="CarParking.Customer">
+    <Position X="2.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACBAAAAIAgBAAAEAAAAAAAEAAAAAAAgAAAAACAAAA=</HashCode>
       <FileName>Customer.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="CarParking.Attendant" Collapsed="true">
+  <Class Name="CarParking.Attendant">
     <Position X="2.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Attendant.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="CarParking.ManageParkingSpace" Collapsed="true">
+  <Interface Name="CarParking.ManageParkingSpace">
     <Position X="1" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ManageParkingSpace.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="CarParking.ParkCar" Collapsed="true">
+  <Interface Name="CarParking.ParkCar">
     <Position X="2.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ParkCar.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="CarParking.HandlePayment" Collapsed="true">
+  <Interface Name="CarParking.HandlePayment">
     <Position X="4.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>HandlePayment.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="CarParking.RetrieveCar" Collapsed="true">
+  <Interface Name="CarParking.RetrieveCar">
     <Position X="6.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>RetrieveCar.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="CarParking.ViewReport" Collapsed="true">
+  <Interface Name="CarParking.z" Collapsed="true">
     <Position X="8.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
