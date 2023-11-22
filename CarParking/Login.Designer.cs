@@ -33,6 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.text_pass_fake = new System.Windows.Forms.TextBox();
             this.button_sign = new System.Windows.Forms.Button();
             this.button_login = new System.Windows.Forms.Button();
             this.text_pass = new System.Windows.Forms.TextBox();
@@ -40,16 +41,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel_sign = new System.Windows.Forms.Panel();
-            this.text_mailS = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.text_userS = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.text_passS = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.button_signS = new System.Windows.Forms.Button();
             this.text_passS2 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.button_signS = new System.Windows.Forms.Button();
-            this.text_pass_fake = new System.Windows.Forms.TextBox();
+            this.text_passS = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.text_userS = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.text_mailS = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel_sign.SuspendLayout();
             this.SuspendLayout();
@@ -106,6 +106,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(336, 214);
             this.panel1.TabIndex = 3;
+            // 
+            // text_pass_fake
+            // 
+            this.text_pass_fake.Location = new System.Drawing.Point(116, 74);
+            this.text_pass_fake.Name = "text_pass_fake";
+            this.text_pass_fake.Size = new System.Drawing.Size(192, 22);
+            this.text_pass_fake.TabIndex = 6;
+            this.text_pass_fake.TextChanged += new System.EventHandler(this.text_pass_fake_TextChanged);
             // 
             // button_sign
             // 
@@ -192,24 +200,62 @@
             this.panel_sign.Size = new System.Drawing.Size(359, 290);
             this.panel_sign.TabIndex = 4;
             // 
-            // text_mailS
+            // button_signS
             // 
-            this.text_mailS.Location = new System.Drawing.Point(138, 19);
-            this.text_mailS.Name = "text_mailS";
-            this.text_mailS.Size = new System.Drawing.Size(192, 22);
-            this.text_mailS.TabIndex = 4;
+            this.button_signS.BackColor = System.Drawing.Color.Teal;
+            this.button_signS.FlatAppearance.BorderSize = 0;
+            this.button_signS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_signS.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_signS.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button_signS.Location = new System.Drawing.Point(243, 206);
+            this.button_signS.Name = "button_signS";
+            this.button_signS.Size = new System.Drawing.Size(87, 37);
+            this.button_signS.TabIndex = 11;
+            this.button_signS.Text = "Sign up";
+            this.button_signS.UseVisualStyleBackColor = false;
+            this.button_signS.Click += new System.EventHandler(this.button_signS_Click);
             // 
-            // label6
+            // text_passS2
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Location = new System.Drawing.Point(21, 19);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 21);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Email: ";
+            this.text_passS2.Location = new System.Drawing.Point(138, 147);
+            this.text_passS2.Name = "text_passS2";
+            this.text_passS2.PasswordChar = '*';
+            this.text_passS2.Size = new System.Drawing.Size(192, 22);
+            this.text_passS2.TabIndex = 10;
+            this.text_passS2.TextChanged += new System.EventHandler(this.text_passS2_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label9.Location = new System.Drawing.Point(21, 147);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(111, 21);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "ComfirmPass: ";
+            // 
+            // text_passS
+            // 
+            this.text_passS.Location = new System.Drawing.Point(138, 102);
+            this.text_passS.Name = "text_passS";
+            this.text_passS.PasswordChar = '*';
+            this.text_passS.Size = new System.Drawing.Size(192, 22);
+            this.text_passS.TabIndex = 8;
+            this.text_passS.TextChanged += new System.EventHandler(this.text_passS_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label8.Location = new System.Drawing.Point(21, 102);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(87, 21);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Password: ";
             // 
             // text_userS
             // 
@@ -230,68 +276,25 @@
             this.label7.TabIndex = 5;
             this.label7.Text = "Username: ";
             // 
-            // text_passS
+            // text_mailS
             // 
-            this.text_passS.Location = new System.Drawing.Point(138, 102);
-            this.text_passS.Name = "text_passS";
-            this.text_passS.Size = new System.Drawing.Size(192, 22);
-            this.text_passS.TabIndex = 8;
-            this.text_passS.TextChanged += new System.EventHandler(this.text_passS_TextChanged);
+            this.text_mailS.Location = new System.Drawing.Point(138, 19);
+            this.text_mailS.Name = "text_mailS";
+            this.text_mailS.Size = new System.Drawing.Size(192, 22);
+            this.text_mailS.TabIndex = 4;
+            this.text_mailS.TextChanged += new System.EventHandler(this.text_mailS_TextChanged);
             // 
-            // label8
+            // label6
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label8.Location = new System.Drawing.Point(21, 102);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 21);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Password: ";
-            // 
-            // text_passS2
-            // 
-            this.text_passS2.Location = new System.Drawing.Point(138, 147);
-            this.text_passS2.Name = "text_passS2";
-            this.text_passS2.Size = new System.Drawing.Size(192, 22);
-            this.text_passS2.TabIndex = 10;
-            this.text_passS2.TextChanged += new System.EventHandler(this.text_passS2_TextChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label9.Location = new System.Drawing.Point(21, 147);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(111, 21);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "ComfirmPass: ";
-            // 
-            // button_signS
-            // 
-            this.button_signS.BackColor = System.Drawing.Color.Teal;
-            this.button_signS.FlatAppearance.BorderSize = 0;
-            this.button_signS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_signS.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_signS.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button_signS.Location = new System.Drawing.Point(243, 206);
-            this.button_signS.Name = "button_signS";
-            this.button_signS.Size = new System.Drawing.Size(87, 37);
-            this.button_signS.TabIndex = 11;
-            this.button_signS.Text = "Sign up";
-            this.button_signS.UseVisualStyleBackColor = false;
-            this.button_signS.Click += new System.EventHandler(this.button_signS_Click);
-            // 
-            // text_pass_fake
-            // 
-            this.text_pass_fake.Location = new System.Drawing.Point(116, 74);
-            this.text_pass_fake.Name = "text_pass_fake";
-            this.text_pass_fake.Size = new System.Drawing.Size(192, 22);
-            this.text_pass_fake.TabIndex = 6;
-            this.text_pass_fake.TextChanged += new System.EventHandler(this.text_pass_fake_TextChanged);
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label6.Location = new System.Drawing.Point(21, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 21);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Email: ";
             // 
             // Form_Login
             // 

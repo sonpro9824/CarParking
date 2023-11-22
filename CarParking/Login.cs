@@ -71,7 +71,10 @@ namespace CarParking
         private void button_signS_Click(object sender, EventArgs e)
         {
             if (text_mailS.Text == string.Empty || text_userS.Text == string.Empty || text_passS.Text == string.Empty)
+            {
                 MessageBox.Show("khong duoc de trong");
+                return;
+            }
             Random random = new Random();
             int randomNumber = random.Next(1, 101);
             bool check = true;
@@ -145,6 +148,11 @@ namespace CarParking
             {
                 MessageBox.Show(ex.Message, "Erorr");
             }
+        }
+
+        private void text_mailS_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
