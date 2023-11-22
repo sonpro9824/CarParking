@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Parking_Car_Detail">
+  <DataContextMoniker Name="/Parking_Car_DetailDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a4c5d74f-825f-4ea9-9f13-0bb0e3aab23b" absoluteBounds="2.375, 2.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/Parking_Car_DetailDataContext/ParkingSpace" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3c2a0741-d43b-4b61-b9e4-eda0d6cff844" absoluteBounds="2.39, 2.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

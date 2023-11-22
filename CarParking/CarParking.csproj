@@ -48,6 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attendant.cs" />
+    <Compile Include="Attendant_Data.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Attendant_Data.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs" />
     <Compile Include="Datalogin.designer.cs">
       <AutoGen>True</AutoGen>
@@ -63,8 +68,18 @@
     </Compile>
     <Compile Include="ManageParkingSpace.cs" />
     <Compile Include="Manager.cs" />
+    <Compile Include="Manager_Data.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manager_Data.dbml</DependentUpon>
+    </Compile>
     <Compile Include="ParkCar.cs" />
     <Compile Include="ParkingSpace.cs" />
+    <Compile Include="Parking_Car_Detail.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Parking_Car_Detail.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,6 +107,14 @@
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Attendant_Data.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Attendant_Data.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Attendant_Data.dbml.layout">
+      <DependentUpon>Attendant_Data.dbml</DependentUpon>
+    </None>
     <None Include="Datalogin.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>Datalogin.designer.cs</LastGenOutput>
@@ -101,6 +124,22 @@
       <DependentUpon>Datalogin.dbml</DependentUpon>
     </None>
     <None Include="LogicDiagram.cd" />
+    <None Include="Manager_Data.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Manager_Data.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Manager_Data.dbml.layout">
+      <DependentUpon>Manager_Data.dbml</DependentUpon>
+    </None>
+    <None Include="Parking_Car_Detail.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Parking_Car_Detail.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Parking_Car_Detail.dbml.layout">
+      <DependentUpon>Parking_Car_Detail.dbml</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

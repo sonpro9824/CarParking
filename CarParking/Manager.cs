@@ -7,28 +7,20 @@ using System.Xml.Linq;
 
 namespace CarParking
 {
-    public class Manager : Person
+    public class Manager_Information : Person
     {
-        private bool[] ParkingSpace = new bool[100];
-        private decimal pricing = default;
-        private Person[] Staff = new Person[100];
-        public Manager()
+        public Manager_Information()
         {
         }
-        public Manager(string name, string contactInfor, bool[] ParkingSpace, decimal Pricing, Person[] people) : base(name, contactInfor)
+
+        public Manager_Information(string name, string contactInfor) : base(name, contactInfor)
         {
-            this.ParkingSpace1 = ParkingSpace;
-            this.Pricing = Pricing;
-            this.Staff1 = people;
         }
 
-        public bool[] ParkingSpace1 { get => ParkingSpace; set => ParkingSpace = value; }
-        public decimal Pricing { get => pricing; set => pricing = value; }
-        public Person[] Staff1 { get => Staff; set => Staff = value; }
-
-        public override void PrinfDetail()
+        public override string PrinfDetail()
         {
-            
+            string output = "Manager information\nName: " + Name + "\nContact infomation: " + ContactInfor;
+            return output;
         }
     }
 }

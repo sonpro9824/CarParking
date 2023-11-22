@@ -22,7 +22,7 @@ namespace CarParking
         public string Name { get => name; set => name = value; }
         public string ContactInfor { get => contactInfor; set => contactInfor = value; }
 
-        public abstract void PrinfDetail();
+        public abstract string PrinfDetail();
        
     }
 }

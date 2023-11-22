@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CarParking
 {
-    public interface z
+    public interface Viewreport
     {
     }
 }

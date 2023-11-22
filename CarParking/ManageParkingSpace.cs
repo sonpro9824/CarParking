@@ -7,5 +7,6 @@ namespace CarParking
 {
     public interface ManageParkingSpace
     {
+
     }
 }

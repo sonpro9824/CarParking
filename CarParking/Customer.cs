@@ -5,31 +5,33 @@ using System.Text;
 
 namespace CarParking
 {
-    public class Customer : Person
+    public class Customer_Information : Person
     {
-        private int CarID;
-        private bool Paid;
-        private string Paymethod;
-        private string CustomerID;
-        private bool CarRetrieve;
-        public Customer(string name, string contactInfor, int carID, bool paid, string paymethod, string customerID, bool carRetrieve) : base(name, contactInfor)
+        string car_ID = string.Empty;
+        DateTime date_come = new DateTime();
+        DateTime date_leave = new DateTime();
+        string payment_method = string.Empty;
+
+        public Customer_Information()
         {
-            CarID1 = carID;
-            Paid1 = paid;
-            Paymethod1 = paymethod;
-            CustomerID1 = customerID;
-            CarRetrieve1 = carRetrieve;
         }
 
-        public int CarID1 { get => CarID; set => CarID = value; }
-        public bool Paid1 { get => Paid; set => Paid = value; }
-        public string Paymethod1 { get => Paymethod; set => Paymethod = value; }
-        public string CustomerID1 { get => CustomerID; set => CustomerID = value; }
-        public bool CarRetrieve1 { get => CarRetrieve; set => CarRetrieve = value; }
-
-        public override void PrinfDetail()
+        public Customer_Information(string name, string contactInfor, string car_ID, DateTime date_come, DateTime date_leave, string payment_method) : base(name, contactInfor)
         {
+            this.Car_ID = car_ID;
+            this.Date_come = date_come;
+            this.Date_leave = date_leave;
+            this.Payment_method = payment_method;
+        }
+        public string Car_ID { get => car_ID; set => car_ID = value; }
+        public DateTime Date_come { get => date_come; set => date_come = value; }
+        public DateTime Date_leave { get => date_leave; set => date_leave = value; }
+        public string Payment_method { get => payment_method; set => payment_method = value; }
 
+        public override string PrinfDetail()
+        {
+            string output = "Customer information\nName: " + Name + "\nContact infomation: " + ContactInfor;
+            return output;
         }
     }
 }

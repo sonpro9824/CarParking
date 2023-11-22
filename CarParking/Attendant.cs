@@ -5,17 +5,17 @@ using System.Text;
 
 namespace CarParking
 {
-    public class Attendant : Person
+    public class Attendant_Information : Person
     {
-
-        public Attendant(string name, string contactInfor) : base(name, contactInfor)
+        public Attendant_Information(string name, string contactInfor) : base(name, contactInfor)
         {
 
         }
 
-        public override void PrinfDetail()
+        public override string PrinfDetail()
         {
-
+            string output = "Attendant information\nName: " + Name + "\nContact infomation: " + ContactInfor;
+            return output;
         }
     }
 }

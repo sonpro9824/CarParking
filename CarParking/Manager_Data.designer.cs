@@ -23,70 +23,68 @@ namespace CarParking
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="paking")]
-	public partial class DataloginDataContext : System.Data.Linq.DataContext
+	public partial class Manager_DataDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void Insertlogin(login instance);
-    partial void Updatelogin(login instance);
-    partial void Deletelogin(login instance);
+    partial void InsertManager(Manager instance);
+    partial void UpdateManager(Manager instance);
+    partial void DeleteManager(Manager instance);
     #endregion
 		
-		public DataloginDataContext() : 
+		public Manager_DataDataContext() : 
 				base(global::CarParking.Properties.Settings.Default.pakingConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataloginDataContext(string connection) : 
+		public Manager_DataDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataloginDataContext(System.Data.IDbConnection connection) : 
+		public Manager_DataDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataloginDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public Manager_DataDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataloginDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public Manager_DataDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<login> logins
+		public System.Data.Linq.Table<Manager> Managers
 		{
 			get
 			{
-				return this.GetTable<login>();
+				return this.GetTable<Manager>();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.login")]
-	public partial class login : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Manager")]
+	public partial class Manager : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _Id;
 		
-		private string _email;
+		private string _Name;
 		
-		private string _user;
-		
-		private string _pass;
+		private string _Contact_information;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -94,15 +92,13 @@ namespace CarParking
     partial void OnCreated();
     partial void OnIdChanging(int value);
     partial void OnIdChanged();
-    partial void OnemailChanging(string value);
-    partial void OnemailChanged();
-    partial void OnuserChanging(string value);
-    partial void OnuserChanged();
-    partial void OnpassChanging(string value);
-    partial void OnpassChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnContact_informationChanging(string value);
+    partial void OnContact_informationChanged();
     #endregion
 		
-		public login()
+		public Manager()
 		{
 			OnCreated();
 		}
@@ -127,62 +123,42 @@ namespace CarParking
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="NVarChar(50)")]
-		public string email
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50)")]
+		public string Name
 		{
 			get
 			{
-				return this._email;
+				return this._Name;
 			}
 			set
 			{
-				if ((this._email != value))
+				if ((this._Name != value))
 				{
-					this.OnemailChanging(value);
+					this.OnNameChanging(value);
 					this.SendPropertyChanging();
-					this._email = value;
-					this.SendPropertyChanged("email");
-					this.OnemailChanged();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[user]", Storage="_user", DbType="NVarChar(50)")]
-		public string user
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Contact information]", Storage="_Contact_information", DbType="NVarChar(50)")]
+		public string Contact_information
 		{
 			get
 			{
-				return this._user;
+				return this._Contact_information;
 			}
 			set
 			{
-				if ((this._user != value))
+				if ((this._Contact_information != value))
 				{
-					this.OnuserChanging(value);
+					this.OnContact_informationChanging(value);
 					this.SendPropertyChanging();
-					this._user = value;
-					this.SendPropertyChanged("user");
-					this.OnuserChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pass", DbType="NVarChar(50)")]
-		public string pass
-		{
-			get
-			{
-				return this._pass;
-			}
-			set
-			{
-				if ((this._pass != value))
-				{
-					this.OnpassChanging(value);
-					this.SendPropertyChanging();
-					this._pass = value;
-					this.SendPropertyChanged("pass");
-					this.OnpassChanged();
+					this._Contact_information = value;
+					this.SendPropertyChanged("Contact_information");
+					this.OnContact_informationChanged();
 				}
 			}
 		}
