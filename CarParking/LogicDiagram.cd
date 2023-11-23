@@ -3,19 +3,19 @@
   <Class Name="CarParking.Person">
     <Position X="1" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAEAAAAAYAAAAGAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAhQAgEAUAAAAACAIAAAACAABCAAQAQgA=</HashCode>
       <FileName>Person.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CarParking.Customer_Information">
-    <Position X="3.25" Y="4.25" Width="1.5" />
+    <Position X="3.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQBAAAEAAAAAAAEAAAAAAAAAAAAAAAgAAABIAAAAQ=</HashCode>
+      <HashCode>AAARBAAAEAAAAAAAEAAAAAAAAAAAAAAAgAAABIAAAAQ=</HashCode>
       <FileName>Customer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CarParking.ParkingSpaceInformation">
-    <Position X="5.5" Y="2.5" Width="1.5" />
+    <Position X="8" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQBAACEAQAAgAAAAAAAAAAAAAAAAAAAiQAABIgAAAQ=</HashCode>
       <FileName>ParkingSpace.cs</FileName>
@@ -24,20 +24,22 @@
   <Class Name="CarParking.Manager_Information">
     <Position X="3.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAACAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Manager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CarParking.Attendant_Information">
-    <Position X="1" Y="6.25" Width="1.5" />
+    <Position X="1.75" Y="8.25" Width="1.5" />
     <InheritanceLine Type="CarParking.Person" FixedToPoint="true">
       <Path>
-        <Point X="1.75" Y="5.468" />
-        <Point X="1.75" Y="6.25" />
+        <Point X="1.75" Y="7.391" />
+        <Point X="1.75" Y="7.875" />
+        <Point X="2.5" Y="7.875" />
+        <Point X="2.5" Y="8.25" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Attendant.cs</FileName>
     </TypeIdentifier>
   </Class>

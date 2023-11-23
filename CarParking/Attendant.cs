@@ -7,15 +7,19 @@ namespace CarParking
 {
     public class Attendant_Information : Person
     {
-        public Attendant_Information(int ID, string name, string contactInfor) : base(ID, name, contactInfor)
+        bool[] check_ID_Attandant = Enumerable.Repeat(true, 1000).ToArray();   
+        public Attendant_Information()
         {
-
         }
 
-        public override string PrinfDetail()
+        public Attendant_Information(int iD, string first_name, string last_name, string sex, 
+            string email, string phone_number, string address, DateTime doB) : base(iD, first_name, last_name, sex, email, phone_number, address, doB)
         {
-            string output = "Attendant information\nName: " + Name + "\nContact infomation: " + ContactInfor;
-            return output;
+        }
+
+        public override void PrinfDetail()
+        {
+            throw new NotImplementedException();
         }
     }
 }

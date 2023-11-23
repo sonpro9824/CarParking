@@ -82,9 +82,19 @@ namespace CarParking
 		
 		private int _Id;
 		
-		private string _Name;
+		private string _First_Name;
 		
-		private string _Contact_information;
+		private string _Last_Name;
+		
+		private string _Sex;
+		
+		private System.Nullable<System.DateTime> _Date_of_Birth;
+		
+		private string _Phone_Number;
+		
+		private string _Email;
+		
+		private string _Address;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -92,10 +102,20 @@ namespace CarParking
     partial void OnCreated();
     partial void OnIdChanging(int value);
     partial void OnIdChanged();
-    partial void OnNameChanging(string value);
-    partial void OnNameChanged();
-    partial void OnContact_informationChanging(string value);
-    partial void OnContact_informationChanged();
+    partial void OnFirst_NameChanging(string value);
+    partial void OnFirst_NameChanged();
+    partial void OnLast_NameChanging(string value);
+    partial void OnLast_NameChanged();
+    partial void OnSexChanging(string value);
+    partial void OnSexChanged();
+    partial void OnDate_of_BirthChanging(System.Nullable<System.DateTime> value);
+    partial void OnDate_of_BirthChanged();
+    partial void OnPhone_NumberChanging(string value);
+    partial void OnPhone_NumberChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    partial void OnAddressChanging(string value);
+    partial void OnAddressChanged();
     #endregion
 		
 		public Manager()
@@ -123,42 +143,142 @@ namespace CarParking
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50)")]
-		public string Name
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[First Name]", Storage="_First_Name", DbType="NVarChar(50)")]
+		public string First_Name
 		{
 			get
 			{
-				return this._Name;
+				return this._First_Name;
 			}
 			set
 			{
-				if ((this._Name != value))
+				if ((this._First_Name != value))
 				{
-					this.OnNameChanging(value);
+					this.OnFirst_NameChanging(value);
 					this.SendPropertyChanging();
-					this._Name = value;
-					this.SendPropertyChanged("Name");
-					this.OnNameChanged();
+					this._First_Name = value;
+					this.SendPropertyChanged("First_Name");
+					this.OnFirst_NameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Contact information]", Storage="_Contact_information", DbType="NVarChar(50)")]
-		public string Contact_information
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Last Name]", Storage="_Last_Name", DbType="NVarChar(50)")]
+		public string Last_Name
 		{
 			get
 			{
-				return this._Contact_information;
+				return this._Last_Name;
 			}
 			set
 			{
-				if ((this._Contact_information != value))
+				if ((this._Last_Name != value))
 				{
-					this.OnContact_informationChanging(value);
+					this.OnLast_NameChanging(value);
 					this.SendPropertyChanging();
-					this._Contact_information = value;
-					this.SendPropertyChanged("Contact_information");
-					this.OnContact_informationChanged();
+					this._Last_Name = value;
+					this.SendPropertyChanged("Last_Name");
+					this.OnLast_NameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sex", DbType="NChar(10)")]
+		public string Sex
+		{
+			get
+			{
+				return this._Sex;
+			}
+			set
+			{
+				if ((this._Sex != value))
+				{
+					this.OnSexChanging(value);
+					this.SendPropertyChanging();
+					this._Sex = value;
+					this.SendPropertyChanged("Sex");
+					this.OnSexChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Date of Birth]", Storage="_Date_of_Birth", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Date_of_Birth
+		{
+			get
+			{
+				return this._Date_of_Birth;
+			}
+			set
+			{
+				if ((this._Date_of_Birth != value))
+				{
+					this.OnDate_of_BirthChanging(value);
+					this.SendPropertyChanging();
+					this._Date_of_Birth = value;
+					this.SendPropertyChanged("Date_of_Birth");
+					this.OnDate_of_BirthChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Phone Number]", Storage="_Phone_Number", DbType="NChar(10)")]
+		public string Phone_Number
+		{
+			get
+			{
+				return this._Phone_Number;
+			}
+			set
+			{
+				if ((this._Phone_Number != value))
+				{
+					this.OnPhone_NumberChanging(value);
+					this.SendPropertyChanging();
+					this._Phone_Number = value;
+					this.SendPropertyChanged("Phone_Number");
+					this.OnPhone_NumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
+					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="NVarChar(50)")]
+		public string Address
+		{
+			get
+			{
+				return this._Address;
+			}
+			set
+			{
+				if ((this._Address != value))
+				{
+					this.OnAddressChanging(value);
+					this.SendPropertyChanging();
+					this._Address = value;
+					this.SendPropertyChanged("Address");
+					this.OnAddressChanged();
 				}
 			}
 		}

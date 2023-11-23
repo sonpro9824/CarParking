@@ -8,25 +8,40 @@ namespace CarParking
     public abstract class Person
     {
         private int ID;
-        private string name;
-        private string contactInfor;
-
+        private string first_name = null;
+        private string last_name = null;
+        private string sex = null;
+        private string email = null;
+        private string phone_number = null;
+        private string address = null;
+        DateTime DoB = default;
         protected Person()
         {
         }
 
-        protected Person(int iD, string name, string contactInfor)
+        protected Person(int iD, string first_name, string last_name, string sex, string email, string phone_number, string address, DateTime doB)
         {
-            ID1 = iD;
-            this.name = name;
-            this.contactInfor = contactInfor;
+            ID = iD;
+            this.first_name = first_name;
+            this.last_name = last_name;
+            this.sex = sex;
+            this.email = email;
+            this.phone_number = phone_number;
+            this.address = address;
+            DoB = doB;
         }
 
-        public string Name { get => name; set => name = value; }
-        public string ContactInfor { get => contactInfor; set => contactInfor = value; }
         public int ID1 { get => ID; set => ID = value; }
+        public string First_name { get => first_name; set => first_name = value; }
+        public string Last_name { get => last_name; set => last_name = value; }
 
-        public abstract string PrinfDetail();
+        public string Sex { get => sex; set => sex = value; }
+        public string Email { get => email; set => email = value; }
+        public string Phone_number { get => phone_number; set => phone_number = value; }
+        public string Address { get => address; set => address = value; }
+        public DateTime DoB1 { get => DoB; set => DoB = value; }
+
+        public abstract void PrinfDetail();
        
     }
 }

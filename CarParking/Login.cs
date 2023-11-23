@@ -13,8 +13,10 @@ namespace CarParking
 {
     public partial class Form_Login : Form
     {
-        bool[] check = new bool[100];
-        
+        Manager manager1;
+        Manager_DataDataContext manager_Data;
+
+        //int currentID = default;
         login nv; 
         DataloginDataContext db; 
         public Form_Login()
@@ -33,13 +35,8 @@ namespace CarParking
             Panel_Role.Show();
             panel_sign.Show();
         }
-
         private void Form_Login_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 100; i++)
-            {
-                check[i] = false;
-            }
             nv = new login();
             db = new DataloginDataContext();
             panel_sign.Hide();
@@ -59,9 +56,31 @@ namespace CarParking
                         this.Hide();
                         string output = "Welcome back, " + i.role;
                         MessageBox.Show(output);
-                        Welcome welcome = new Welcome();
-                        welcome.Show();
-                       
+                        /* Welcome welcome = new Welcome();
+                         welcome.Show();*/
+                        try
+                        {
+                            manager1 = new Manager();
+                            manager_Data = new Manager_DataDataContext();
+                            if (i.role == "Manager")
+                            {
+                                manager1 = manager_Data.Managers.Where(m => m.Email == i.email).FirstOrDefault();
+                                //MessageBox.Show(manager1.Id.ToString());
+                              
+                                Manager_form manager_Form = new Manager_form(manager1.Id);
+                                manager_Form.Show();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Under development!");
+                            }
+                        }
+                         catch (Exception ex)
+                        {
+                            //MessageBox.Show("Im here");
+                            //MessageBox.Show(ex.Message, "Error");
+                        }
+
                     }
                     else
                     {
@@ -82,12 +101,12 @@ namespace CarParking
         {
             if(text_mailS.Text.Contains("@gmail.com")== false)
             {
-                MessageBox.Show("sai gmail");
+                MessageBox.Show("The email is wrong");
                 return;
             }
             if (text_mailS.Text == string.Empty || text_userS.Text == string.Empty || text_passS.Text == string.Empty)
             {
-                MessageBox.Show("khong duoc de trong");
+                MessageBox.Show("Invalid input");
                 return;
             }
             if (!Button_QuanLy.Checked && !Button_Attendant.Checked && !Button_Customer.Checked)
@@ -95,37 +114,66 @@ namespace CarParking
                 MessageBox.Show("You have not set your role!");
                 return;
             }
-            Random random = new Random();
-            int randomNumber = random.Next(1, 101);
-            bool checklop = true;
-            do
-            {
-                
-                if (check[randomNumber] == false)
-                {
-                    check[randomNumber] = true;
-                    checklop = false;
-                }
-                else
-                    randomNumber = random.Next(1, 101);
-            } while (checklop);
+            /* Random random = new Random();
+             int randomNumber = random.Next(1, 101);
+             bool checklop = true;
+             do
+             {
+
+                 if (check[randomNumber] == false)
+                 {
+                     check[randomNumber] = true;
+                     checklop = false;
+                 }
+                 else
+                     randomNumber = random.Next(1, 101);
+             } while (checklop);*/
+           
             try
             {
+                nv = new login();
+                db = new DataloginDataContext();
+                
                 var i = db.logins.Where(s => s.user == text_userS.Text ).FirstOrDefault();
                 if (i!=null)
                 {
-                    MessageBox.Show("Ten da ton tai");
+                    MessageBox.Show("The name has already existed!");
                     return;
                 }
                 if (text_passS.Text == text_passS2.Text)
                 {
-                    nv.Id = randomNumber;
+                   
+                    //nv.Id = randomNumber;
                     nv.email = text_mailS.Text;
                     nv.user = text_userS.Text;
                     nv.pass = text_passS.Text;
                     if (Button_QuanLy.Checked)
                     {
+                        manager_Data = new Manager_DataDataContext();
+                        manager1 = new Manager();
+                        Random random = new Random();
+                        int randomNumber = random.Next(1, 1000);
+                        bool checklop = true;
+                        do
+                        {
+
+                            if (Manager_Information.check_ID_Manager[randomNumber] == true)
+                            {
+                                Manager_Information.check_ID_Manager[randomNumber] = false;
+                                checklop = false;
+                            }
+                            else
+                                randomNumber = random.Next(1, 1000);
+                        } while (checklop);
+
+                       /* manager_Data.Managers.InsertOnSubmit(manager1);
+                        manager_Data.SubmitChanges();*/
                         nv.role = "Manager";
+                        manager1.Email = nv.email;
+                        manager1.Id = randomNumber;
+                        manager_Data.Managers.InsertOnSubmit(manager1);
+                        manager_Data.SubmitChanges();
+                        
                     }
                     else if (Button_Attendant.Checked)
                     {

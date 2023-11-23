@@ -54,10 +54,21 @@
       <DependentUpon>Attendant_Data.dbml</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
+    <Compile Include="Customer_Data.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customer_Data.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Datalogin.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Datalogin.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Personal_In4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Personal_In4.Designer.cs">
+      <DependentUpon>Edit_Personal_In4.cs</DependentUpon>
     </Compile>
     <Compile Include="HandlePayment.cs" />
     <Compile Include="Login.cs">
@@ -72,6 +83,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Manager_Data.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_form.Designer.cs">
+      <DependentUpon>Manager_form.cs</DependentUpon>
     </Compile>
     <Compile Include="ParkCar.cs" />
     <Compile Include="ParkingSpace.cs" />
@@ -91,8 +108,14 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Edit_Personal_In4.resx">
+      <DependentUpon>Edit_Personal_In4.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_form.resx">
+      <DependentUpon>Manager_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -114,6 +137,14 @@
     </None>
     <None Include="Attendant_Data.dbml.layout">
       <DependentUpon>Attendant_Data.dbml</DependentUpon>
+    </None>
+    <None Include="Customer_Data.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Customer_Data.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Customer_Data.dbml.layout">
+      <DependentUpon>Customer_Data.dbml</DependentUpon>
     </None>
     <None Include="Datalogin.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
