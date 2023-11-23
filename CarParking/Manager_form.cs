@@ -19,16 +19,15 @@ namespace CarParking
             InitializeComponent();
             manager.ID1 = currentID;
             Manager temp = (from m in dataContext.Managers where m.Id == currentID select m).FirstOrDefault();
-            MessageBox.Show(temp.First_Name);
             Manager_Information.Transfer_Manager_Detail(temp, ref manager);
         }
 
         private void PI_button_Click(object sender, EventArgs e)
         {
-            if (manager.First_name != null)
+           /* if (manager.First_name != null)
             {
                 MessageBox.Show("Yeah sir");
-            }
+            }*/
             manager.PrinfDetail();
         }
 

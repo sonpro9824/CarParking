@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace CarParking
 {
-    public partial class Edit_Personal_In4 : Form
+    public partial class Edit_Personal_In4_Manager : Form
     {
         login nv;
         DataloginDataContext db;
         Manager_DataDataContext dataContext = new Manager_DataDataContext();
         Manager Manager = new Manager();
         Manager_Information manager_Information = new Manager_Information();
-        public Edit_Personal_In4(Manager_Information _Information)
+        public Edit_Personal_In4_Manager(Manager_Information _Information)
         {
             InitializeComponent();
             manager_Information = _Information;
@@ -242,7 +242,7 @@ namespace CarParking
 
         private void Back_button_Click(object sender, EventArgs e)
         {
-            Edit_Contact_Value_panel.Visible = false;
+            Edit_PI_panel.Visible = false;
             Value_Information_panel.Visible = true;
 
             Contact_Value_panel.Visible = true;

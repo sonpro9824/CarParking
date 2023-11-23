@@ -22,7 +22,7 @@ namespace CarParking
 
         public override void PrinfDetail()
         {
-            Edit_Personal_In4 edit_Personal_In4 = new Edit_Personal_In4(this);
+            Edit_Personal_In4_Manager edit_Personal_In4 = new Edit_Personal_In4_Manager(this);
             edit_Personal_In4.Show();
         }
         /// <summary>

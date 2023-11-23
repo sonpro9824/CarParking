@@ -1,6 +1,6 @@
 ﻿namespace CarParking
 {
-    partial class Edit_Personal_In4
+    partial class Edit_Personal_In4_Manager
     {
         /// <summary>
         /// Required designer variable.
@@ -393,7 +393,7 @@
             this.Back_button.Visible = false;
             this.Back_button.Click += new System.EventHandler(this.Back_button_Click);
             // 
-            // Edit_Personal_In4
+            // Edit_Personal_In4_Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -416,9 +416,9 @@
             this.Controls.Add(this.Last_Name_label);
             this.Controls.Add(this.ID_label);
             this.Controls.Add(this.Title_label);
-            this.Name = "Edit_Personal_In4";
+            this.Name = "Edit_Personal_In4_Manager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Edit_Personal_In4";
+            this.Text = "Manager information";
             this.Load += new System.EventHandler(this.Edit_Personal_In4_Load);
             this.Contact_Value_panel.ResumeLayout(false);
             this.Contact_Value_panel.PerformLayout();

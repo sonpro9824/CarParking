@@ -55,7 +55,7 @@ namespace CarParking
                         //MessageBox.Show("Yeah sirrr");
                         this.Hide();
                         string output = "Welcome back, " + i.role;
-                        MessageBox.Show(output);
+                        MessageBox.Show(output, "Notice");
                         /* Welcome welcome = new Welcome();
                          welcome.Show();*/
                         try
@@ -134,7 +134,7 @@ namespace CarParking
                 nv = new login();
                 db = new DataloginDataContext();
                 
-                var i = db.logins.Where(s => s.user == text_userS.Text ).FirstOrDefault();
+                var i = db.logins.Where(s => s.user == text_userS.Text || s.email == text_mailS.Text).FirstOrDefault();
                 if (i!=null)
                 {
                     MessageBox.Show("The name has already existed!");

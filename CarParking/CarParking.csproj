@@ -64,11 +64,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Datalogin.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Edit_Personal_In4.cs">
+    <Compile Include="Edit_Personal_In4_Manager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Edit_Personal_In4.Designer.cs">
-      <DependentUpon>Edit_Personal_In4.cs</DependentUpon>
+    <Compile Include="Edit_Personal_In4_Manager.Designer.cs">
+      <DependentUpon>Edit_Personal_In4_Manager.cs</DependentUpon>
     </Compile>
     <Compile Include="HandlePayment.cs" />
     <Compile Include="Login.cs">
@@ -108,8 +108,8 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Edit_Personal_In4.resx">
-      <DependentUpon>Edit_Personal_In4.cs</DependentUpon>
+    <EmbeddedResource Include="Edit_Personal_In4_Manager.resx">
+      <DependentUpon>Edit_Personal_In4_Manager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
