@@ -73,9 +73,9 @@
             this.Title_label.AutoSize = true;
             this.Title_label.Location = new System.Drawing.Point(329, 9);
             this.Title_label.Name = "Title_label";
-            this.Title_label.Size = new System.Drawing.Size(129, 16);
+            this.Title_label.Size = new System.Drawing.Size(186, 16);
             this.Title_label.TabIndex = 0;
-            this.Title_label.Text = "Personal Information";
+            this.Title_label.Text = "Manager Personal Information";
             this.Title_label.Click += new System.EventHandler(this.Title_label_Click);
             // 
             // ID_label

@@ -16,6 +16,8 @@ namespace CarParking
         Manager manager1;
         Manager_DataDataContext manager_Data;
 
+        Attendant attendant1;
+        Attendant_DataDataContext attendant_Data;
         //int currentID = default;
         login nv; 
         DataloginDataContext db; 
@@ -50,7 +52,7 @@ namespace CarParking
                 if(text_user != null && text_pass != null)
                 {
                     var i = db.logins.Where(s => s.user == text_user.Text && s.pass == text_pass.Text).FirstOrDefault();
-                    if(i != null)
+                    if (i != null)
                     {
                         //MessageBox.Show("Yeah sirrr");
                         this.Hide();
@@ -58,34 +60,51 @@ namespace CarParking
                         MessageBox.Show(output, "Notice");
                         /* Welcome welcome = new Welcome();
                          welcome.Show();*/
-                        try
+                        if (i.role == "Manager")
                         {
-                            manager1 = new Manager();
-                            manager_Data = new Manager_DataDataContext();
-                            if (i.role == "Manager")
+                            try
                             {
+                                manager1 = new Manager();
+                                manager_Data = new Manager_DataDataContext();
                                 manager1 = manager_Data.Managers.Where(m => m.Email == i.email).FirstOrDefault();
-                                //MessageBox.Show(manager1.Id.ToString());
-                              
+                                    //MessageBox.Show(manager1.Id.ToString());
+
                                 Manager_form manager_Form = new Manager_form(manager1.Id);
                                 manager_Form.Show();
+                         
                             }
-                            else
+                            catch (Exception ex)
                             {
-                                MessageBox.Show("Under development!");
+                                //MessageBox.Show("Im here");
+                                //MessageBox.Show(ex.Message, "Error");
+                            }
+
+                        }
+                        else if (i.role == "Attendant")
+                        {
+                            try
+                            {
+                                attendant1 = new Attendant();
+                                attendant_Data = new Attendant_DataDataContext();
+                              
+                                    attendant1 = attendant_Data.Attendants.Where(m => m.Email == i.email).FirstOrDefault();
+                                    //MessageBox.Show(manager1.Id.ToString());
+
+                                    Attendant_form attendant_Form = new Attendant_form(attendant1.Id);
+                                    attendant_Form.Show();
+                             
+                            }
+                            catch (Exception ex)
+                            {
+                                //MessageBox.Show("Im here");
+                                //MessageBox.Show(ex.Message, "Error");
                             }
                         }
-                         catch (Exception ex)
-                        {
-                            //MessageBox.Show("Im here");
-                            //MessageBox.Show(ex.Message, "Error");
-                        }
-
                     }
                     else
                     {
-                        MessageBox.Show(text_pass.Text);
-                        MessageBox.Show("Sai ten hoac mat khau");
+                        //MessageBox.Show(text_pass.Text);
+                        MessageBox.Show("The user name or password was wrong!", "Notice");
                     }
 
                 }
@@ -137,7 +156,7 @@ namespace CarParking
                 var i = db.logins.Where(s => s.user == text_userS.Text || s.email == text_mailS.Text).FirstOrDefault();
                 if (i!=null)
                 {
-                    MessageBox.Show("The name has already existed!");
+                    MessageBox.Show("The name or email has already existed!");
                     return;
                 }
                 if (text_passS.Text == text_passS2.Text)
@@ -177,11 +196,51 @@ namespace CarParking
                     }
                     else if (Button_Attendant.Checked)
                     {
+                        Attendant_DataDataContext attendant_DataDataContext = new Attendant_DataDataContext();
+                        Attendant attendant = new Attendant();
+                        Random random = new Random();
+                        int randomNumber = random.Next(1, 1000);
+                        bool checklop = true;
+                        do
+                        {
+
+                            if (Attendant_Information.check_ID_Attandant[randomNumber] == true)
+                            {
+                                Attendant_Information.check_ID_Attandant[randomNumber] = false;
+                                checklop = false;
+                            }
+                            else
+                                randomNumber = random.Next(1, 1000);
+                        } while (checklop);
                         nv.role = "Attendant";
+                        attendant.Email = nv.email;
+                        attendant.Id = randomNumber;
+                        attendant_DataDataContext.Attendants.InsertOnSubmit(attendant);
+                        attendant_DataDataContext.SubmitChanges();
                     }
                     else if (Button_Customer.Checked)
                     {
+                        Customer_DataDataContext customer_Data = new Customer_DataDataContext();
+                        Customer customer = new Customer();
+                        Random random = new Random();
+                        int randomNumber = random.Next(1, 1000);
+                        bool checklop = true;
+                        do
+                        {
+
+                            if (Customer_Information.check_ID_Customer[randomNumber] == true)
+                            {
+                                Customer_Information.check_ID_Customer[randomNumber] = false;
+                                checklop = false;
+                            }
+                            else
+                                randomNumber = random.Next(1, 1000);
+                        } while (checklop);
                         nv.role = "Customer";
+                        customer.Email = nv.email;
+                        customer.Id = randomNumber;
+                        customer_Data.Customers.InsertOnSubmit(customer);
+                        customer_Data.SubmitChanges();
                     }
                     db.logins.InsertOnSubmit(nv);
                     db.SubmitChanges();
@@ -233,6 +292,16 @@ namespace CarParking
         }
 
         private void Button_QuanLy_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

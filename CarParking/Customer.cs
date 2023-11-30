@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CarParking
 {
-    public class Customer_Information : Person
+    public class Customer_Information : Person, ParkCar, RetrieveCar, HandlePayment
     {
         string car_ID = string.Empty;
         DateTime date_come = new DateTime();
@@ -16,7 +16,7 @@ namespace CarParking
         {
         }
 
-        public Customer_Information(int iD, string first_name, string last_name, string sex, string email, 
+        public Customer_Information(int iD, string first_name, string last_name, string sex, string email,
             string phone_number, string address, DateTime doB) : base(iD, first_name, last_name, sex, email, phone_number, address, doB)
         {
         }

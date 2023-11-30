@@ -1,6 +1,6 @@
 ﻿namespace CarParking
 {
-    partial class Manager_form
+    partial class Attendant_form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,26 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Title_label = new System.Windows.Forms.Label();
             this.panel_menu = new System.Windows.Forms.Panel();
+            this.pannel_logo = new System.Windows.Forms.FlowLayoutPanel();
+            this.Title_label = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.MPS_button = new System.Windows.Forms.Button();
-            this.Prinf_Detail_button = new System.Windows.Forms.Button();
-            this.pannel_logo = new System.Windows.Forms.FlowLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Prinf_detail_label = new System.Windows.Forms.Button();
             this.panel_menu.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Title_label
-            // 
-            this.Title_label.AutoSize = true;
-            this.Title_label.Location = new System.Drawing.Point(354, 9);
-            this.Title_label.Name = "Title_label";
-            this.Title_label.Size = new System.Drawing.Size(96, 16);
-            this.Title_label.TabIndex = 0;
-            this.Title_label.Text = "Manager Work";
             // 
             // panel_menu
             // 
@@ -56,14 +47,32 @@
             this.panel_menu.Controls.Add(this.button5);
             this.panel_menu.Controls.Add(this.button4);
             this.panel_menu.Controls.Add(this.button3);
-            this.panel_menu.Controls.Add(this.MPS_button);
-            this.panel_menu.Controls.Add(this.Prinf_Detail_button);
+            this.panel_menu.Controls.Add(this.button2);
+            this.panel_menu.Controls.Add(this.Prinf_detail_label);
             this.panel_menu.Controls.Add(this.pannel_logo);
             this.panel_menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_menu.Location = new System.Drawing.Point(0, 0);
             this.panel_menu.Name = "panel_menu";
             this.panel_menu.Size = new System.Drawing.Size(200, 450);
             this.panel_menu.TabIndex = 1;
+            // 
+            // pannel_logo
+            // 
+            this.pannel_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.pannel_logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pannel_logo.Location = new System.Drawing.Point(0, 0);
+            this.pannel_logo.Name = "pannel_logo";
+            this.pannel_logo.Size = new System.Drawing.Size(200, 68);
+            this.pannel_logo.TabIndex = 1;
+            // 
+            // Title_label
+            // 
+            this.Title_label.AutoSize = true;
+            this.Title_label.Location = new System.Drawing.Point(418, 18);
+            this.Title_label.Name = "Title_label";
+            this.Title_label.Size = new System.Drawing.Size(94, 16);
+            this.Title_label.TabIndex = 2;
+            this.Title_label.Text = "Attendant work";
             // 
             // button6
             // 
@@ -125,58 +134,48 @@
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // MPS_button
+            // button2
             // 
-            this.MPS_button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.MPS_button.FlatAppearance.BorderSize = 0;
-            this.MPS_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MPS_button.ForeColor = System.Drawing.Color.White;
-            this.MPS_button.Image = global::CarParking.Properties.Resources.car1_83961__2_;
-            this.MPS_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MPS_button.Location = new System.Drawing.Point(0, 130);
-            this.MPS_button.Name = "MPS_button";
-            this.MPS_button.Size = new System.Drawing.Size(200, 62);
-            this.MPS_button.TabIndex = 2;
-            this.MPS_button.Text = "Manage Parking Spaces";
-            this.MPS_button.UseVisualStyleBackColor = true;
-            this.MPS_button.Click += new System.EventHandler(this.MPS_button_Click);
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::CarParking.Properties.Resources.car1_83961__2_;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 130);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(200, 62);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // Prinf_Detail_button
+            // Prinf_detail_label
             // 
-            this.Prinf_Detail_button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Prinf_Detail_button.FlatAppearance.BorderSize = 0;
-            this.Prinf_Detail_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Prinf_Detail_button.ForeColor = System.Drawing.Color.White;
-            this.Prinf_Detail_button.Image = global::CarParking.Properties.Resources.car1_83961__2_;
-            this.Prinf_Detail_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Prinf_Detail_button.Location = new System.Drawing.Point(0, 68);
-            this.Prinf_Detail_button.Name = "Prinf_Detail_button";
-            this.Prinf_Detail_button.Size = new System.Drawing.Size(200, 62);
-            this.Prinf_Detail_button.TabIndex = 1;
-            this.Prinf_Detail_button.Text = "Prinf Detail";
-            this.Prinf_Detail_button.UseVisualStyleBackColor = true;
-            this.Prinf_Detail_button.Click += new System.EventHandler(this.PI_button_Click);
+            this.Prinf_detail_label.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Prinf_detail_label.FlatAppearance.BorderSize = 0;
+            this.Prinf_detail_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Prinf_detail_label.ForeColor = System.Drawing.Color.White;
+            this.Prinf_detail_label.Image = global::CarParking.Properties.Resources.car1_83961__2_;
+            this.Prinf_detail_label.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Prinf_detail_label.Location = new System.Drawing.Point(0, 68);
+            this.Prinf_detail_label.Name = "Prinf_detail_label";
+            this.Prinf_detail_label.Size = new System.Drawing.Size(200, 62);
+            this.Prinf_detail_label.TabIndex = 1;
+            this.Prinf_detail_label.Text = "Prinf detail";
+            this.Prinf_detail_label.UseVisualStyleBackColor = true;
+            this.Prinf_detail_label.Click += new System.EventHandler(this.Prinf_detail_label_Click);
             // 
-            // pannel_logo
-            // 
-            this.pannel_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.pannel_logo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pannel_logo.Location = new System.Drawing.Point(0, 0);
-            this.pannel_logo.Name = "pannel_logo";
-            this.pannel_logo.Size = new System.Drawing.Size(200, 68);
-            this.pannel_logo.TabIndex = 1;
-            // 
-            // Manager_form
+            // Attendant_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel_menu);
             this.Controls.Add(this.Title_label);
-            this.Name = "Manager_form";
+            this.Controls.Add(this.panel_menu);
+            this.Name = "Attendant_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Manager_form";
-            this.Load += new System.EventHandler(this.Manager_form_Load);
+            this.Text = "Attendant_form";
+            this.Load += new System.EventHandler(this.Attendant_form_Load);
             this.panel_menu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -185,14 +184,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label Title_label;
         private System.Windows.Forms.Panel panel_menu;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button MPS_button;
-        private System.Windows.Forms.Button Prinf_Detail_button;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Prinf_detail_label;
         private System.Windows.Forms.FlowLayoutPanel pannel_logo;
+        private System.Windows.Forms.Label Title_label;
     }
 }

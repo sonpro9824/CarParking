@@ -82,11 +82,9 @@ namespace CarParking
 		
 		private int _Id;
 		
-		private string _Name;
+		private string _First_Name;
 		
 		private string _Contact_information;
-		
-		private string _Car_ID;
 		
 		private System.Nullable<System.DateTime> _Date_come;
 		
@@ -94,24 +92,38 @@ namespace CarParking
 		
 		private string _Payment_method;
 		
+		private string _Last_Name;
+		
+		private string _Phone_number;
+		
+		private string _Email;
+		
+		private string _Address;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
     partial void OnIdChanging(int value);
     partial void OnIdChanged();
-    partial void OnNameChanging(string value);
-    partial void OnNameChanged();
+    partial void OnFirst_NameChanging(string value);
+    partial void OnFirst_NameChanged();
     partial void OnContact_informationChanging(string value);
     partial void OnContact_informationChanged();
-    partial void OnCar_IDChanging(string value);
-    partial void OnCar_IDChanged();
     partial void OnDate_comeChanging(System.Nullable<System.DateTime> value);
     partial void OnDate_comeChanged();
     partial void OnDate_LeaveChanging(System.Nullable<System.DateTime> value);
     partial void OnDate_LeaveChanged();
     partial void OnPayment_methodChanging(string value);
     partial void OnPayment_methodChanged();
+    partial void OnLast_NameChanging(string value);
+    partial void OnLast_NameChanged();
+    partial void OnPhone_numberChanging(string value);
+    partial void OnPhone_numberChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    partial void OnAddressChanging(string value);
+    partial void OnAddressChanged();
     #endregion
 		
 		public Customer()
@@ -139,22 +151,22 @@ namespace CarParking
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50)")]
-		public string Name
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[First Name]", Storage="_First_Name", DbType="NVarChar(50)")]
+		public string First_Name
 		{
 			get
 			{
-				return this._Name;
+				return this._First_Name;
 			}
 			set
 			{
-				if ((this._Name != value))
+				if ((this._First_Name != value))
 				{
-					this.OnNameChanging(value);
+					this.OnFirst_NameChanging(value);
 					this.SendPropertyChanging();
-					this._Name = value;
-					this.SendPropertyChanged("Name");
-					this.OnNameChanged();
+					this._First_Name = value;
+					this.SendPropertyChanged("First_Name");
+					this.OnFirst_NameChanged();
 				}
 			}
 		}
@@ -175,26 +187,6 @@ namespace CarParking
 					this._Contact_information = value;
 					this.SendPropertyChanged("Contact_information");
 					this.OnContact_informationChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Car_ID", DbType="NVarChar(50)")]
-		public string Car_ID
-		{
-			get
-			{
-				return this._Car_ID;
-			}
-			set
-			{
-				if ((this._Car_ID != value))
-				{
-					this.OnCar_IDChanging(value);
-					this.SendPropertyChanging();
-					this._Car_ID = value;
-					this.SendPropertyChanged("Car_ID");
-					this.OnCar_IDChanged();
 				}
 			}
 		}
@@ -255,6 +247,86 @@ namespace CarParking
 					this._Payment_method = value;
 					this.SendPropertyChanged("Payment_method");
 					this.OnPayment_methodChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Last Name]", Storage="_Last_Name", DbType="NChar(10)")]
+		public string Last_Name
+		{
+			get
+			{
+				return this._Last_Name;
+			}
+			set
+			{
+				if ((this._Last_Name != value))
+				{
+					this.OnLast_NameChanging(value);
+					this.SendPropertyChanging();
+					this._Last_Name = value;
+					this.SendPropertyChanged("Last_Name");
+					this.OnLast_NameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Phone number]", Storage="_Phone_number", DbType="NChar(10)")]
+		public string Phone_number
+		{
+			get
+			{
+				return this._Phone_number;
+			}
+			set
+			{
+				if ((this._Phone_number != value))
+				{
+					this.OnPhone_numberChanging(value);
+					this.SendPropertyChanging();
+					this._Phone_number = value;
+					this.SendPropertyChanged("Phone_number");
+					this.OnPhone_numberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NChar(10)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
+					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="NChar(10)")]
+		public string Address
+		{
+			get
+			{
+				return this._Address;
+			}
+			set
+			{
+				if ((this._Address != value))
+				{
+					this.OnAddressChanging(value);
+					this.SendPropertyChanging();
+					this._Address = value;
+					this.SendPropertyChanged("Address");
+					this.OnAddressChanged();
 				}
 			}
 		}

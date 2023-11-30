@@ -53,6 +53,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Attendant_Data.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Attendant_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendant_form.Designer.cs">
+      <DependentUpon>Attendant_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs" />
     <Compile Include="Customer_Data.designer.cs">
       <AutoGen>True</AutoGen>
@@ -63,6 +69,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Datalogin.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Personal_In4_Attendant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Personal_In4_Attendant.Designer.cs">
+      <DependentUpon>Edit_Personal_In4_Attendant.cs</DependentUpon>
     </Compile>
     <Compile Include="Edit_Personal_In4_Manager.cs">
       <SubType>Form</SubType>
@@ -90,6 +102,12 @@
     <Compile Include="Manager_form.Designer.cs">
       <DependentUpon>Manager_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manage_Parking_Space.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_Parking_Space.Designer.cs">
+      <DependentUpon>Manage_Parking_Space.cs</DependentUpon>
+    </Compile>
     <Compile Include="ParkCar.cs" />
     <Compile Include="ParkingSpace.cs" />
     <Compile Include="Parking_Car_Detail.designer.cs">
@@ -108,6 +126,12 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Attendant_form.resx">
+      <DependentUpon>Attendant_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Personal_In4_Attendant.resx">
+      <DependentUpon>Edit_Personal_In4_Attendant.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Edit_Personal_In4_Manager.resx">
       <DependentUpon>Edit_Personal_In4_Manager.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manager_form.resx">
       <DependentUpon>Manager_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_Parking_Space.resx">
+      <DependentUpon>Manage_Parking_Space.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

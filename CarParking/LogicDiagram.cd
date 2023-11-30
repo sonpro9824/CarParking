@@ -8,14 +8,15 @@
     </TypeIdentifier>
   </Class>
   <Class Name="CarParking.Customer_Information">
-    <Position X="3.75" Y="5.25" Width="1.5" />
+    <Position X="3.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAARBAAAEAAAAAAAEAAAAAAAAAAAAAAAgAAABIAAAAQ=</HashCode>
       <FileName>Customer.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="CarParking.ParkingSpaceInformation">
-    <Position X="8" Y="2.5" Width="1.5" />
+    <Position X="7" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQBAACEAQAAgAAAAAAAAAAAAAAAAAAAiQAABIgAAAQ=</HashCode>
       <FileName>ParkingSpace.cs</FileName>
@@ -27,29 +28,22 @@
       <HashCode>AAAAAAAAAAAAAAAAEAAAACAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Manager.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="CarParking.Attendant_Information">
-    <Position X="1.75" Y="8.25" Width="1.5" />
+    <Position X="1" Y="8.5" Width="1.5" />
     <InheritanceLine Type="CarParking.Person" FixedToPoint="true">
       <Path>
         <Point X="1.75" Y="7.391" />
-        <Point X="1.75" Y="7.875" />
-        <Point X="2.5" Y="7.875" />
-        <Point X="2.5" Y="8.25" />
+        <Point X="1.75" Y="8.5" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAEAAAAAAAAEAAQAACAAAAAAAAIAAABAAAAAAA=</HashCode>
       <FileName>Attendant.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="CarParking.ManageParkingSpace" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ManageParkingSpace.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Interface Name="CarParking.ParkCar" Collapsed="true">
     <Position X="2.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
@@ -76,6 +70,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ViewReport.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CarParking.ManageParkingSpace" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ManageParkingSpace.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
