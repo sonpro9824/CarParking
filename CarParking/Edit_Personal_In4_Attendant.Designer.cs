@@ -38,33 +38,33 @@
             this.Salary_base_label = new System.Windows.Forms.Label();
             this.Date_Hired_label = new System.Windows.Forms.Label();
             this.edit_information_panel = new System.Windows.Forms.Panel();
+            this.Salary_base_edit_textbox = new System.Windows.Forms.TextBox();
+            this.dateTimePicker_dh = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker_dob = new System.Windows.Forms.DateTimePicker();
+            this.RB_Others = new System.Windows.Forms.RadioButton();
+            this.RB_Male = new System.Windows.Forms.RadioButton();
+            this.RB_Female = new System.Windows.Forms.RadioButton();
+            this.Last_name_edit_textbox = new System.Windows.Forms.TextBox();
+            this.First_name_edit_textbox = new System.Windows.Forms.TextBox();
             this.Contact_information_label = new System.Windows.Forms.Label();
             this.Phone_number_label = new System.Windows.Forms.Label();
             this.Address_label = new System.Windows.Forms.Label();
             this.Email_label = new System.Windows.Forms.Label();
             this.information_value_panel = new System.Windows.Forms.Panel();
-            this.First_name_edit_textbox = new System.Windows.Forms.TextBox();
-            this.Last_name_edit_textbox = new System.Windows.Forms.TextBox();
-            this.RB_Others = new System.Windows.Forms.RadioButton();
-            this.RB_Male = new System.Windows.Forms.RadioButton();
-            this.RB_Female = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker_dob = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker_dh = new System.Windows.Forms.DateTimePicker();
-            this.Salary_base_edit_textbox = new System.Windows.Forms.TextBox();
-            this.First_name_value_label = new System.Windows.Forms.Label();
-            this.Last_name_value_label = new System.Windows.Forms.Label();
-            this.Sex_value_label = new System.Windows.Forms.Label();
-            this.DoB_value_label = new System.Windows.Forms.Label();
-            this.Salary_base_value_label = new System.Windows.Forms.Label();
             this.DH_value_label = new System.Windows.Forms.Label();
+            this.Salary_base_value_label = new System.Windows.Forms.Label();
+            this.DoB_value_label = new System.Windows.Forms.Label();
+            this.Sex_value_label = new System.Windows.Forms.Label();
+            this.Last_name_value_label = new System.Windows.Forms.Label();
+            this.First_name_value_label = new System.Windows.Forms.Label();
             this.Contact_in4_value_panel = new System.Windows.Forms.Panel();
-            this.Phone_number_value_label = new System.Windows.Forms.Label();
-            this.Email_value_lable = new System.Windows.Forms.Label();
             this.Address_value_label = new System.Windows.Forms.Label();
+            this.Email_value_lable = new System.Windows.Forms.Label();
+            this.Phone_number_value_label = new System.Windows.Forms.Label();
             this.Edit_contact_in4_panel = new System.Windows.Forms.Panel();
-            this.Phone_number_edit_textbox = new System.Windows.Forms.TextBox();
-            this.Email_edit_textbox = new System.Windows.Forms.TextBox();
             this.Address_edit_textbox = new System.Windows.Forms.TextBox();
+            this.Email_edit_textbox = new System.Windows.Forms.TextBox();
+            this.Phone_number_edit_textbox = new System.Windows.Forms.TextBox();
             this.Edit_button = new System.Windows.Forms.Button();
             this.Back_button = new System.Windows.Forms.Button();
             this.Save_button = new System.Windows.Forms.Button();
@@ -171,6 +171,74 @@
             this.edit_information_panel.Size = new System.Drawing.Size(669, 194);
             this.edit_information_panel.TabIndex = 23;
             // 
+            // Salary_base_edit_textbox
+            // 
+            this.Salary_base_edit_textbox.Location = new System.Drawing.Point(14, 162);
+            this.Salary_base_edit_textbox.Name = "Salary_base_edit_textbox";
+            this.Salary_base_edit_textbox.Size = new System.Drawing.Size(412, 22);
+            this.Salary_base_edit_textbox.TabIndex = 13;
+            // 
+            // dateTimePicker_dh
+            // 
+            this.dateTimePicker_dh.Location = new System.Drawing.Point(14, 126);
+            this.dateTimePicker_dh.Name = "dateTimePicker_dh";
+            this.dateTimePicker_dh.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker_dh.TabIndex = 12;
+            // 
+            // dateTimePicker_dob
+            // 
+            this.dateTimePicker_dob.Location = new System.Drawing.Point(14, 93);
+            this.dateTimePicker_dob.Name = "dateTimePicker_dob";
+            this.dateTimePicker_dob.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker_dob.TabIndex = 11;
+            // 
+            // RB_Others
+            // 
+            this.RB_Others.AutoSize = true;
+            this.RB_Others.Location = new System.Drawing.Point(217, 65);
+            this.RB_Others.Name = "RB_Others";
+            this.RB_Others.Size = new System.Drawing.Size(67, 20);
+            this.RB_Others.TabIndex = 10;
+            this.RB_Others.TabStop = true;
+            this.RB_Others.Text = "Others";
+            this.RB_Others.UseVisualStyleBackColor = true;
+            // 
+            // RB_Male
+            // 
+            this.RB_Male.AutoSize = true;
+            this.RB_Male.Location = new System.Drawing.Point(14, 65);
+            this.RB_Male.Name = "RB_Male";
+            this.RB_Male.Size = new System.Drawing.Size(58, 20);
+            this.RB_Male.TabIndex = 8;
+            this.RB_Male.TabStop = true;
+            this.RB_Male.Text = "Male";
+            this.RB_Male.UseVisualStyleBackColor = true;
+            // 
+            // RB_Female
+            // 
+            this.RB_Female.AutoSize = true;
+            this.RB_Female.Location = new System.Drawing.Point(112, 65);
+            this.RB_Female.Name = "RB_Female";
+            this.RB_Female.Size = new System.Drawing.Size(74, 20);
+            this.RB_Female.TabIndex = 9;
+            this.RB_Female.TabStop = true;
+            this.RB_Female.Text = "Female";
+            this.RB_Female.UseVisualStyleBackColor = true;
+            // 
+            // Last_name_edit_textbox
+            // 
+            this.Last_name_edit_textbox.Location = new System.Drawing.Point(14, 37);
+            this.Last_name_edit_textbox.Name = "Last_name_edit_textbox";
+            this.Last_name_edit_textbox.Size = new System.Drawing.Size(412, 22);
+            this.Last_name_edit_textbox.TabIndex = 1;
+            // 
+            // First_name_edit_textbox
+            // 
+            this.First_name_edit_textbox.Location = new System.Drawing.Point(14, 9);
+            this.First_name_edit_textbox.Name = "First_name_edit_textbox";
+            this.First_name_edit_textbox.Size = new System.Drawing.Size(412, 22);
+            this.First_name_edit_textbox.TabIndex = 0;
+            // 
             // Contact_information_label
             // 
             this.Contact_information_label.AutoSize = true;
@@ -221,109 +289,14 @@
             this.information_value_panel.Size = new System.Drawing.Size(669, 194);
             this.information_value_panel.TabIndex = 24;
             // 
-            // First_name_edit_textbox
+            // DH_value_label
             // 
-            this.First_name_edit_textbox.Location = new System.Drawing.Point(14, 9);
-            this.First_name_edit_textbox.Name = "First_name_edit_textbox";
-            this.First_name_edit_textbox.Size = new System.Drawing.Size(412, 22);
-            this.First_name_edit_textbox.TabIndex = 0;
-            // 
-            // Last_name_edit_textbox
-            // 
-            this.Last_name_edit_textbox.Location = new System.Drawing.Point(14, 37);
-            this.Last_name_edit_textbox.Name = "Last_name_edit_textbox";
-            this.Last_name_edit_textbox.Size = new System.Drawing.Size(412, 22);
-            this.Last_name_edit_textbox.TabIndex = 1;
-            // 
-            // RB_Others
-            // 
-            this.RB_Others.AutoSize = true;
-            this.RB_Others.Location = new System.Drawing.Point(217, 65);
-            this.RB_Others.Name = "RB_Others";
-            this.RB_Others.Size = new System.Drawing.Size(67, 20);
-            this.RB_Others.TabIndex = 10;
-            this.RB_Others.TabStop = true;
-            this.RB_Others.Text = "Others";
-            this.RB_Others.UseVisualStyleBackColor = true;
-            // 
-            // RB_Male
-            // 
-            this.RB_Male.AutoSize = true;
-            this.RB_Male.Location = new System.Drawing.Point(14, 65);
-            this.RB_Male.Name = "RB_Male";
-            this.RB_Male.Size = new System.Drawing.Size(58, 20);
-            this.RB_Male.TabIndex = 8;
-            this.RB_Male.TabStop = true;
-            this.RB_Male.Text = "Male";
-            this.RB_Male.UseVisualStyleBackColor = true;
-            // 
-            // RB_Female
-            // 
-            this.RB_Female.AutoSize = true;
-            this.RB_Female.Location = new System.Drawing.Point(112, 65);
-            this.RB_Female.Name = "RB_Female";
-            this.RB_Female.Size = new System.Drawing.Size(74, 20);
-            this.RB_Female.TabIndex = 9;
-            this.RB_Female.TabStop = true;
-            this.RB_Female.Text = "Female";
-            this.RB_Female.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker_dob
-            // 
-            this.dateTimePicker_dob.Location = new System.Drawing.Point(14, 93);
-            this.dateTimePicker_dob.Name = "dateTimePicker_dob";
-            this.dateTimePicker_dob.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker_dob.TabIndex = 11;
-            // 
-            // dateTimePicker_dh
-            // 
-            this.dateTimePicker_dh.Location = new System.Drawing.Point(14, 126);
-            this.dateTimePicker_dh.Name = "dateTimePicker_dh";
-            this.dateTimePicker_dh.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker_dh.TabIndex = 12;
-            // 
-            // Salary_base_edit_textbox
-            // 
-            this.Salary_base_edit_textbox.Location = new System.Drawing.Point(14, 162);
-            this.Salary_base_edit_textbox.Name = "Salary_base_edit_textbox";
-            this.Salary_base_edit_textbox.Size = new System.Drawing.Size(412, 22);
-            this.Salary_base_edit_textbox.TabIndex = 13;
-            // 
-            // First_name_value_label
-            // 
-            this.First_name_value_label.AutoSize = true;
-            this.First_name_value_label.Location = new System.Drawing.Point(23, 15);
-            this.First_name_value_label.Name = "First_name_value_label";
-            this.First_name_value_label.Size = new System.Drawing.Size(62, 16);
-            this.First_name_value_label.TabIndex = 0;
-            this.First_name_value_label.Text = "Unknown";
-            // 
-            // Last_name_value_label
-            // 
-            this.Last_name_value_label.AutoSize = true;
-            this.Last_name_value_label.Location = new System.Drawing.Point(23, 40);
-            this.Last_name_value_label.Name = "Last_name_value_label";
-            this.Last_name_value_label.Size = new System.Drawing.Size(62, 16);
-            this.Last_name_value_label.TabIndex = 1;
-            this.Last_name_value_label.Text = "Unknown";
-            // 
-            // Sex_value_label
-            // 
-            this.Sex_value_label.AutoSize = true;
-            this.Sex_value_label.Location = new System.Drawing.Point(23, 65);
-            this.Sex_value_label.Name = "Sex_value_label";
-            this.Sex_value_label.Size = new System.Drawing.Size(62, 16);
-            this.Sex_value_label.TabIndex = 2;
-            this.Sex_value_label.Text = "Unknown";
-            // 
-            // DoB_value_label
-            // 
-            this.DoB_value_label.AutoSize = true;
-            this.DoB_value_label.Location = new System.Drawing.Point(23, 98);
-            this.DoB_value_label.Name = "DoB_value_label";
-            this.DoB_value_label.Size = new System.Drawing.Size(62, 16);
-            this.DoB_value_label.TabIndex = 3;
-            this.DoB_value_label.Text = "Unknown";
+            this.DH_value_label.AutoSize = true;
+            this.DH_value_label.Location = new System.Drawing.Point(23, 132);
+            this.DH_value_label.Name = "DH_value_label";
+            this.DH_value_label.Size = new System.Drawing.Size(62, 16);
+            this.DH_value_label.TabIndex = 5;
+            this.DH_value_label.Text = "Unknown";
             // 
             // Salary_base_value_label
             // 
@@ -334,14 +307,41 @@
             this.Salary_base_value_label.TabIndex = 4;
             this.Salary_base_value_label.Text = "Unknown";
             // 
-            // DH_value_label
+            // DoB_value_label
             // 
-            this.DH_value_label.AutoSize = true;
-            this.DH_value_label.Location = new System.Drawing.Point(23, 132);
-            this.DH_value_label.Name = "DH_value_label";
-            this.DH_value_label.Size = new System.Drawing.Size(62, 16);
-            this.DH_value_label.TabIndex = 5;
-            this.DH_value_label.Text = "Unknown";
+            this.DoB_value_label.AutoSize = true;
+            this.DoB_value_label.Location = new System.Drawing.Point(23, 98);
+            this.DoB_value_label.Name = "DoB_value_label";
+            this.DoB_value_label.Size = new System.Drawing.Size(62, 16);
+            this.DoB_value_label.TabIndex = 3;
+            this.DoB_value_label.Text = "Unknown";
+            // 
+            // Sex_value_label
+            // 
+            this.Sex_value_label.AutoSize = true;
+            this.Sex_value_label.Location = new System.Drawing.Point(23, 65);
+            this.Sex_value_label.Name = "Sex_value_label";
+            this.Sex_value_label.Size = new System.Drawing.Size(62, 16);
+            this.Sex_value_label.TabIndex = 2;
+            this.Sex_value_label.Text = "Unknown";
+            // 
+            // Last_name_value_label
+            // 
+            this.Last_name_value_label.AutoSize = true;
+            this.Last_name_value_label.Location = new System.Drawing.Point(23, 40);
+            this.Last_name_value_label.Name = "Last_name_value_label";
+            this.Last_name_value_label.Size = new System.Drawing.Size(62, 16);
+            this.Last_name_value_label.TabIndex = 1;
+            this.Last_name_value_label.Text = "Unknown";
+            // 
+            // First_name_value_label
+            // 
+            this.First_name_value_label.AutoSize = true;
+            this.First_name_value_label.Location = new System.Drawing.Point(23, 15);
+            this.First_name_value_label.Name = "First_name_value_label";
+            this.First_name_value_label.Size = new System.Drawing.Size(62, 16);
+            this.First_name_value_label.TabIndex = 0;
+            this.First_name_value_label.Text = "Unknown";
             // 
             // Contact_in4_value_panel
             // 
@@ -353,14 +353,14 @@
             this.Contact_in4_value_panel.Size = new System.Drawing.Size(643, 115);
             this.Contact_in4_value_panel.TabIndex = 28;
             // 
-            // Phone_number_value_label
+            // Address_value_label
             // 
-            this.Phone_number_value_label.AutoSize = true;
-            this.Phone_number_value_label.Location = new System.Drawing.Point(15, 15);
-            this.Phone_number_value_label.Name = "Phone_number_value_label";
-            this.Phone_number_value_label.Size = new System.Drawing.Size(62, 16);
-            this.Phone_number_value_label.TabIndex = 29;
-            this.Phone_number_value_label.Text = "Unknown";
+            this.Address_value_label.AutoSize = true;
+            this.Address_value_label.Location = new System.Drawing.Point(15, 86);
+            this.Address_value_label.Name = "Address_value_label";
+            this.Address_value_label.Size = new System.Drawing.Size(62, 16);
+            this.Address_value_label.TabIndex = 31;
+            this.Address_value_label.Text = "Unknown";
             // 
             // Email_value_lable
             // 
@@ -371,14 +371,14 @@
             this.Email_value_lable.TabIndex = 30;
             this.Email_value_lable.Text = "Unknown";
             // 
-            // Address_value_label
+            // Phone_number_value_label
             // 
-            this.Address_value_label.AutoSize = true;
-            this.Address_value_label.Location = new System.Drawing.Point(15, 86);
-            this.Address_value_label.Name = "Address_value_label";
-            this.Address_value_label.Size = new System.Drawing.Size(62, 16);
-            this.Address_value_label.TabIndex = 31;
-            this.Address_value_label.Text = "Unknown";
+            this.Phone_number_value_label.AutoSize = true;
+            this.Phone_number_value_label.Location = new System.Drawing.Point(15, 15);
+            this.Phone_number_value_label.Name = "Phone_number_value_label";
+            this.Phone_number_value_label.Size = new System.Drawing.Size(62, 16);
+            this.Phone_number_value_label.TabIndex = 29;
+            this.Phone_number_value_label.Text = "Unknown";
             // 
             // Edit_contact_in4_panel
             // 
@@ -391,12 +391,12 @@
             this.Edit_contact_in4_panel.TabIndex = 32;
             this.Edit_contact_in4_panel.Visible = false;
             // 
-            // Phone_number_edit_textbox
+            // Address_edit_textbox
             // 
-            this.Phone_number_edit_textbox.Location = new System.Drawing.Point(25, 8);
-            this.Phone_number_edit_textbox.Name = "Phone_number_edit_textbox";
-            this.Phone_number_edit_textbox.Size = new System.Drawing.Size(427, 22);
-            this.Phone_number_edit_textbox.TabIndex = 0;
+            this.Address_edit_textbox.Location = new System.Drawing.Point(24, 83);
+            this.Address_edit_textbox.Name = "Address_edit_textbox";
+            this.Address_edit_textbox.Size = new System.Drawing.Size(427, 22);
+            this.Address_edit_textbox.TabIndex = 2;
             // 
             // Email_edit_textbox
             // 
@@ -405,12 +405,12 @@
             this.Email_edit_textbox.Size = new System.Drawing.Size(427, 22);
             this.Email_edit_textbox.TabIndex = 1;
             // 
-            // Address_edit_textbox
+            // Phone_number_edit_textbox
             // 
-            this.Address_edit_textbox.Location = new System.Drawing.Point(24, 83);
-            this.Address_edit_textbox.Name = "Address_edit_textbox";
-            this.Address_edit_textbox.Size = new System.Drawing.Size(427, 22);
-            this.Address_edit_textbox.TabIndex = 2;
+            this.Phone_number_edit_textbox.Location = new System.Drawing.Point(25, 8);
+            this.Phone_number_edit_textbox.Name = "Phone_number_edit_textbox";
+            this.Phone_number_edit_textbox.Size = new System.Drawing.Size(427, 22);
+            this.Phone_number_edit_textbox.TabIndex = 0;
             // 
             // Edit_button
             // 
@@ -438,9 +438,10 @@
             this.Save_button.Name = "Save_button";
             this.Save_button.Size = new System.Drawing.Size(75, 23);
             this.Save_button.TabIndex = 35;
-            this.Save_button.Text = "Edit";
+            this.Save_button.Text = "Save";
             this.Save_button.UseVisualStyleBackColor = true;
             this.Save_button.Visible = false;
+            this.Save_button.Click += new System.EventHandler(this.Save_button_Click);
             // 
             // Edit_Personal_In4_Attendant
             // 

@@ -104,5 +104,10 @@ namespace CarParking
             Save_button.Visible = true;
             Edit_button.Visible = false;
         }
+
+        private void Save_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
