@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CarParking
 {
@@ -91,7 +92,21 @@ namespace CarParking
         {
 
         }
-
+     /*   private bool Check_Valid_Input()
+        {
+            if (!Check_Valid_Phone_Number())
+            {
+                return false;
+            }
+            if (First_name_edit_textbox.Text == string.Empty || Last_name_edit_textbox.Text == string.Empty || .Text == string.Empty
+            || Phone_number_edit_textbox.Text.Length > 10 || !textBox2.Text.Contains("@gmail.com") || FN_edit_textbox.Text == string.Empty
+                || LN_edit_textbox.Text == string.Empty)
+            {
+                MessageBox.Show("Invalid input! Try again!", "Notice");
+                return false;
+            }
+            return true;
+        }*/
         private void Edit_button_Click(object sender, EventArgs e)
         {
             Edit_contact_in4_panel.Visible = true;
@@ -108,6 +123,19 @@ namespace CarParking
         private void Save_button_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Back_button_Click(object sender, EventArgs e)
+        {
+            Edit_contact_in4_panel.Visible = false;
+            edit_information_panel.Visible = false;
+
+            Contact_in4_value_panel.Visible = true;
+            information_value_panel.Visible = true;
+
+            Back_button.Visible = false;
+            Save_button.Visible = false;
+            Edit_button.Visible = true;
         }
     }
 }

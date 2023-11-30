@@ -28,7 +28,8 @@ namespace CarParking
 
         public override void PrinfDetail()
         {
-            throw new NotImplementedException();
+            Edit_Personal_In4_Customer edit_Personal = new Edit_Personal_In4_Customer();
+            edit_Personal.Show();
         }
         public static void Transfer_Customer_Detail(Customer db_customer, ref Customer_Information customer_Information)
         {

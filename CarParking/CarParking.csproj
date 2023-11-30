@@ -65,6 +65,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Customer_Data.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Customer_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_form.Designer.cs">
+      <DependentUpon>Customer_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Datalogin.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -134,6 +140,9 @@
     </Compile>
     <EmbeddedResource Include="Attendant_form.resx">
       <DependentUpon>Attendant_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_form.resx">
+      <DependentUpon>Customer_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edit_Personal_In4_Attendant.resx">
       <DependentUpon>Edit_Personal_In4_Attendant.cs</DependentUpon>
