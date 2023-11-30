@@ -1,21 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ParkingCarrrr" Class="Customer_DataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-7TC6IQE;Initial Catalog=ParkingCarrrr;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False" SettingsObjectName="CarParking.Properties.Settings" SettingsPropertyName="ParkingCarrrrConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="paking" Class="Customer_DataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP;Initial Catalog=paking;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False" SettingsObjectName="CarParking.Properties.Settings" SettingsPropertyName="pakingConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Customer" Member="Customers">
     <Type Name="Customer">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="[First Name]" Member="First_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Date of birth]" Member="Date_of_birth" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="[Last Name]" Member="Last_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="[Phone number]" Member="Phone_number" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Sex" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="[Date of birth]" Member="Date_of_birth" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="Address" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="Address" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Column Name="Address" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>
