@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="paking" Class="Attendant_DataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP;Initial Catalog=paking;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False" SettingsObjectName="CarParking.Properties.Settings" SettingsPropertyName="pakingConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ParkingCarrrr" Class="Attendant_DataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-7TC6IQE;Initial Catalog=ParkingCarrrr;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False" SettingsObjectName="CarParking.Properties.Settings" SettingsPropertyName="ParkingCarrrrConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Attendant" Member="Attendants">
     <Type Name="Attendant">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />

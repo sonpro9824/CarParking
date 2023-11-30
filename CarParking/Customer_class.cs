@@ -30,5 +30,44 @@ namespace CarParking
         {
             throw new NotImplementedException();
         }
+        public static void Transfer_Customer_Detail(Customer db_customer, ref Customer_Information customer_Information)
+        {
+
+            customer_Information.ID1 = db_customer.Id;
+            if (db_customer.First_Name != null)
+                customer_Information.First_name = db_customer.First_Name;
+            if (db_customer.Last_Name != null)
+                customer_Information.Last_name = db_customer.Last_Name;
+            if (db_customer.Sex != null)
+                customer_Information.Sex = db_customer.Sex;
+            if (db_customer.Date_of_birth != null)
+                customer_Information.DoB1 = (DateTime)db_customer.Date_of_birth;
+            if (db_customer.Phone_number != null)
+                customer_Information.Phone_number = db_customer.Phone_number;
+            if (db_customer.Email != null)
+                customer_Information.Email = db_customer.Email;
+            if (db_customer.Address != null)
+                customer_Information.Address = db_customer.Address;
+        }
+
+        public static void Transfer_Customer_Detail(Customer_Information customer_Information, ref Customer db_customer)
+        {
+
+            db_customer.Id = customer_Information.ID1;
+            if (customer_Information.First_name != null)
+                db_customer.First_Name = customer_Information.First_name;
+            if (customer_Information.Last_name != null)
+                db_customer.Last_Name = customer_Information.Last_name;
+            if (customer_Information.Sex != null)
+                db_customer.Sex = customer_Information.Sex;
+            if (customer_Information.DoB1 != null)
+                db_customer.Date_of_birth = customer_Information.DoB1;
+            if (customer_Information.Email != null)
+                db_customer.Email = customer_Information.Email;
+            if (customer_Information.Phone_number != null)
+                db_customer.Phone_number = customer_Information.Phone_number;
+            if (customer_Information.Address != null)
+                db_customer.Address = customer_Information.Address;
+        }
     }
 }
