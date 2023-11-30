@@ -10,6 +10,10 @@ namespace CarParking
         public static bool[] check_ID_Attandant = Enumerable.Repeat(true, 1000).ToArray();
         private DateTime Date_Hired = new DateTime();
         private int Salary_base = default;
+
+        public DateTime Date_Hired1 { get => Date_Hired; set => Date_Hired = value; }
+        public int Salary_base1 { get => Salary_base; set => Salary_base = value; }
+
         public Attendant_Information()
         {
         }
@@ -17,8 +21,8 @@ namespace CarParking
         public Attendant_Information(int iD, string first_name, string last_name, string sex,
             string email, string phone_number, string address, DateTime doB, DateTime date_Hired, int salary_base) : base(iD, first_name, last_name, sex, email, phone_number, address, doB)
         {
-            Date_Hired = date_Hired;
-            Salary_base = salary_base;
+            Date_Hired1 = date_Hired;
+            Salary_base1 = salary_base;
         }
         /// <summary>
         /// Chuyen du lieu attendant tu database sang class
@@ -50,10 +54,10 @@ namespace CarParking
             if (attendant.Address != null)
                 attendant_Information.Address = attendant.Address;
             if (attendant.Date_Hired != null)
-                attendant_Information.Date_Hired = (DateTime)attendant.Date_Hired;
+                attendant_Information.Date_Hired1 = (DateTime)attendant.Date_Hired;
             ////////////////////////////////////////////////////
             if (attendant.Salary_base != null)
-                attendant_Information.Salary_base = (int)attendant.Salary_base;
+                attendant_Information.Salary_base1 = (int)attendant.Salary_base;
             ////////////////////////////////////////////////////
 
         }
@@ -86,17 +90,17 @@ namespace CarParking
             ////////////////////////////////////////////////////
             if (attendant_Information.Address != null)
                 attendant.Address = attendant_Information.Address;
-            if (attendant_Information.Date_Hired != null)
-                attendant.Date_Hired = (DateTime)attendant_Information.Date_Hired;
+            if (attendant_Information.Date_Hired1 != null)
+                attendant.Date_Hired = (DateTime)attendant_Information.Date_Hired1;
             ////////////////////////////////////////////////////
-            if (attendant_Information.Salary_base != null)
-                attendant.Salary_base = (int)attendant_Information.Salary_base;
+            if (attendant_Information.Salary_base1 != null)
+                attendant.Salary_base = (int)attendant_Information.Salary_base1;
             ////////////////////////////////////////////////////
 
         }
         public override void PrinfDetail()
         {
-            Edit_Personal_In4_Attendant edit_Personal = new Edit_Personal_In4_Attendant();
+            Edit_Personal_In4_Attendant edit_Personal = new Edit_Personal_In4_Attendant(this);
             edit_Personal.Show();
         }
         public void ParkCar()

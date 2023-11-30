@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attendant.cs" />
+    <Compile Include="Attendant_class.cs" />
     <Compile Include="Attendant_Data.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -59,7 +59,7 @@
     <Compile Include="Attendant_form.Designer.cs">
       <DependentUpon>Attendant_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer.cs" />
+    <Compile Include="Customer_class.cs" />
     <Compile Include="Customer_Data.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -90,7 +90,7 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageParkingSpace.cs" />
-    <Compile Include="Manager.cs" />
+    <Compile Include="Manager_class.cs" />
     <Compile Include="Manager_Data.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
