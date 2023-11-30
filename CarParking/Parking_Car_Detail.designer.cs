@@ -22,7 +22,7 @@ namespace CarParking
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="paking")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="ParkingCarrrr")]
 	public partial class Parking_Car_DetailDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -36,7 +36,7 @@ namespace CarParking
     #endregion
 		
 		public Parking_Car_DetailDataContext() : 
-				base(global::CarParking.Properties.Settings.Default.pakingConnectionString, mappingSource)
+				base(global::CarParking.Properties.Settings.Default.ParkingCarrrrConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -80,35 +80,47 @@ namespace CarParking
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _ID;
+		private int _ID;
 		
 		private System.Nullable<bool> _Status;
 		
 		private System.Nullable<int> _Price;
 		
-		private string _Usingby;
+		private string _ID_Car_using;
+		
+		private System.Nullable<System.DateTime> _Date_Come;
+		
+		private System.Nullable<System.DateTime> _Date_Leave;
+		
+		private System.Nullable<double> _Revenue;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIDChanging(string value);
+    partial void OnIDChanging(int value);
     partial void OnIDChanged();
     partial void OnStatusChanging(System.Nullable<bool> value);
     partial void OnStatusChanged();
     partial void OnPriceChanging(System.Nullable<int> value);
     partial void OnPriceChanged();
-    partial void OnUsingbyChanging(string value);
-    partial void OnUsingbyChanged();
-		#endregion
-
+    partial void OnID_Car_usingChanging(string value);
+    partial void OnID_Car_usingChanged();
+    partial void OnDate_ComeChanging(System.Nullable<System.DateTime> value);
+    partial void OnDate_ComeChanged();
+    partial void OnDate_LeaveChanging(System.Nullable<System.DateTime> value);
+    partial void OnDate_LeaveChanged();
+    partial void OnRevenueChanging(System.Nullable<double> value);
+    partial void OnRevenueChanged();
+    #endregion
+		
 		public ParkingSpace()
 		{
 			OnCreated();
 		}
-
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="NChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string ID
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int ID
 		{
 			get
 			{
@@ -167,22 +179,82 @@ namespace CarParking
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Usingby", DbType="NChar(10)")]
-		public string Usingby
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_Car_using", DbType="NChar(10)")]
+		public string ID_Car_using
 		{
 			get
 			{
-				return this._Usingby;
+				return this._ID_Car_using;
 			}
 			set
 			{
-				if ((this._Usingby != value))
+				if ((this._ID_Car_using != value))
 				{
-					this.OnUsingbyChanging(value);
+					this.OnID_Car_usingChanging(value);
 					this.SendPropertyChanging();
-					this._Usingby = value;
-					this.SendPropertyChanged("Usingby");
-					this.OnUsingbyChanged();
+					this._ID_Car_using = value;
+					this.SendPropertyChanged("ID_Car_using");
+					this.OnID_Car_usingChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date_Come", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Date_Come
+		{
+			get
+			{
+				return this._Date_Come;
+			}
+			set
+			{
+				if ((this._Date_Come != value))
+				{
+					this.OnDate_ComeChanging(value);
+					this.SendPropertyChanging();
+					this._Date_Come = value;
+					this.SendPropertyChanged("Date_Come");
+					this.OnDate_ComeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date_Leave", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Date_Leave
+		{
+			get
+			{
+				return this._Date_Leave;
+			}
+			set
+			{
+				if ((this._Date_Leave != value))
+				{
+					this.OnDate_LeaveChanging(value);
+					this.SendPropertyChanging();
+					this._Date_Leave = value;
+					this.SendPropertyChanged("Date_Leave");
+					this.OnDate_LeaveChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Revenue", DbType="Float")]
+		public System.Nullable<double> Revenue
+		{
+			get
+			{
+				return this._Revenue;
+			}
+			set
+			{
+				if ((this._Revenue != value))
+				{
+					this.OnRevenueChanging(value);
+					this.SendPropertyChanging();
+					this._Revenue = value;
+					this.SendPropertyChanged("Revenue");
+					this.OnRevenueChanged();
 				}
 			}
 		}

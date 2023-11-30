@@ -22,7 +22,7 @@ namespace CarParking
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="paking")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="ParkingCarrrr")]
 	public partial class Attendant_DataDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -36,7 +36,7 @@ namespace CarParking
     #endregion
 		
 		public Attendant_DataDataContext() : 
-				base(global::CarParking.Properties.Settings.Default.pakingConnectionString, mappingSource)
+				base(global::CarParking.Properties.Settings.Default.ParkingCarrrrConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

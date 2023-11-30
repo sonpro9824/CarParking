@@ -1,11 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="paking" Class="Parking_Car_DetailDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP;Initial Catalog=paking;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False" SettingsObjectName="CarParking.Properties.Settings" SettingsPropertyName="pakingConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ParkingCarrrr" Class="Parking_Car_DetailDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-7TC6IQE;Initial Catalog=ParkingCarrrr;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False" SettingsObjectName="CarParking.Properties.Settings" SettingsPropertyName="ParkingCarrrrConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ParkingSpace" Member="ParkingSpaces">
     <Type Name="ParkingSpace">
-      <Column Name="ID" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Usingby" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ID_Car_using" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Date_Come" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Date_Leave" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Revenue" Type="System.Double" DbType="Float" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

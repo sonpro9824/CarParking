@@ -22,7 +22,7 @@ namespace CarParking
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="paking")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="ParkingCarrrr")]
 	public partial class Customer_DataDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -36,7 +36,7 @@ namespace CarParking
     #endregion
 		
 		public Customer_DataDataContext() : 
-				base(global::CarParking.Properties.Settings.Default.pakingConnectionString, mappingSource)
+				base(global::CarParking.Properties.Settings.Default.ParkingCarrrrConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -84,14 +84,6 @@ namespace CarParking
 		
 		private string _First_Name;
 		
-		private string _Contact_information;
-		
-		private System.Nullable<System.DateTime> _Date_come;
-		
-		private System.Nullable<System.DateTime> _Date_Leave;
-		
-		private string _Payment_method;
-		
 		private string _Last_Name;
 		
 		private string _Phone_number;
@@ -99,6 +91,10 @@ namespace CarParking
 		private string _Email;
 		
 		private string _Address;
+		
+		private string _Sex;
+		
+		private System.Nullable<System.DateTime> _Date_of_birth;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -108,14 +104,6 @@ namespace CarParking
     partial void OnIdChanged();
     partial void OnFirst_NameChanging(string value);
     partial void OnFirst_NameChanged();
-    partial void OnContact_informationChanging(string value);
-    partial void OnContact_informationChanged();
-    partial void OnDate_comeChanging(System.Nullable<System.DateTime> value);
-    partial void OnDate_comeChanged();
-    partial void OnDate_LeaveChanging(System.Nullable<System.DateTime> value);
-    partial void OnDate_LeaveChanged();
-    partial void OnPayment_methodChanging(string value);
-    partial void OnPayment_methodChanged();
     partial void OnLast_NameChanging(string value);
     partial void OnLast_NameChanged();
     partial void OnPhone_numberChanging(string value);
@@ -124,6 +112,10 @@ namespace CarParking
     partial void OnEmailChanged();
     partial void OnAddressChanging(string value);
     partial void OnAddressChanged();
+    partial void OnSexChanging(string value);
+    partial void OnSexChanged();
+    partial void OnDate_of_birthChanging(System.Nullable<System.DateTime> value);
+    partial void OnDate_of_birthChanged();
     #endregion
 		
 		public Customer()
@@ -171,87 +163,7 @@ namespace CarParking
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Contact information]", Storage="_Contact_information", DbType="NVarChar(50)")]
-		public string Contact_information
-		{
-			get
-			{
-				return this._Contact_information;
-			}
-			set
-			{
-				if ((this._Contact_information != value))
-				{
-					this.OnContact_informationChanging(value);
-					this.SendPropertyChanging();
-					this._Contact_information = value;
-					this.SendPropertyChanged("Contact_information");
-					this.OnContact_informationChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date_come", DbType="DateTime")]
-		public System.Nullable<System.DateTime> Date_come
-		{
-			get
-			{
-				return this._Date_come;
-			}
-			set
-			{
-				if ((this._Date_come != value))
-				{
-					this.OnDate_comeChanging(value);
-					this.SendPropertyChanging();
-					this._Date_come = value;
-					this.SendPropertyChanged("Date_come");
-					this.OnDate_comeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date_Leave", DbType="DateTime")]
-		public System.Nullable<System.DateTime> Date_Leave
-		{
-			get
-			{
-				return this._Date_Leave;
-			}
-			set
-			{
-				if ((this._Date_Leave != value))
-				{
-					this.OnDate_LeaveChanging(value);
-					this.SendPropertyChanging();
-					this._Date_Leave = value;
-					this.SendPropertyChanged("Date_Leave");
-					this.OnDate_LeaveChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Payment_method", DbType="NVarChar(50)")]
-		public string Payment_method
-		{
-			get
-			{
-				return this._Payment_method;
-			}
-			set
-			{
-				if ((this._Payment_method != value))
-				{
-					this.OnPayment_methodChanging(value);
-					this.SendPropertyChanging();
-					this._Payment_method = value;
-					this.SendPropertyChanged("Payment_method");
-					this.OnPayment_methodChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Last Name]", Storage="_Last_Name", DbType="NChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Last Name]", Storage="_Last_Name", DbType="NVarChar(50)")]
 		public string Last_Name
 		{
 			get
@@ -271,7 +183,7 @@ namespace CarParking
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Phone number]", Storage="_Phone_number", DbType="NChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Phone number]", Storage="_Phone_number", DbType="NVarChar(50)")]
 		public string Phone_number
 		{
 			get
@@ -291,7 +203,7 @@ namespace CarParking
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50)")]
 		public string Email
 		{
 			get
@@ -311,7 +223,7 @@ namespace CarParking
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="NChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="NVarChar(50)")]
 		public string Address
 		{
 			get
@@ -327,6 +239,46 @@ namespace CarParking
 					this._Address = value;
 					this.SendPropertyChanged("Address");
 					this.OnAddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sex", DbType="NVarChar(50)")]
+		public string Sex
+		{
+			get
+			{
+				return this._Sex;
+			}
+			set
+			{
+				if ((this._Sex != value))
+				{
+					this.OnSexChanging(value);
+					this.SendPropertyChanging();
+					this._Sex = value;
+					this.SendPropertyChanged("Sex");
+					this.OnSexChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Date of birth]", Storage="_Date_of_birth", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Date_of_birth
+		{
+			get
+			{
+				return this._Date_of_birth;
+			}
+			set
+			{
+				if ((this._Date_of_birth != value))
+				{
+					this.OnDate_of_birthChanging(value);
+					this.SendPropertyChanging();
+					this._Date_of_birth = value;
+					this.SendPropertyChanged("Date_of_birth");
+					this.OnDate_of_birthChanged();
 				}
 			}
 		}
