@@ -60,6 +60,17 @@
       <DependentUpon>Attendant_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer_class.cs" />
+    <Compile Include="Customer_Data.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customer_Data.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_form.Designer.cs">
+      <DependentUpon>Customer_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Datalogin.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -130,6 +141,9 @@
     <EmbeddedResource Include="Attendant_form.resx">
       <DependentUpon>Attendant_form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customer_form.resx">
+      <DependentUpon>Customer_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Edit_Personal_In4_Attendant.resx">
       <DependentUpon>Edit_Personal_In4_Attendant.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +182,14 @@
     </None>
     <None Include="Attendant_Data.dbml.layout">
       <DependentUpon>Attendant_Data.dbml</DependentUpon>
+    </None>
+    <None Include="Customer_Data.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Customer_Data.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Customer_Data.dbml.layout">
+      <DependentUpon>Customer_Data.dbml</DependentUpon>
     </None>
     <None Include="Datalogin.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>

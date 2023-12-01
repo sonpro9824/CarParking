@@ -431,6 +431,7 @@
             this.Back_button.Text = "Back";
             this.Back_button.UseVisualStyleBackColor = true;
             this.Back_button.Visible = false;
+            this.Back_button.Click += new System.EventHandler(this.Back_button_Click);
             // 
             // Save_button
             // 

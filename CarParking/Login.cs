@@ -18,6 +18,9 @@ namespace CarParking
 
         Attendant attendant1;
         Attendant_DataDataContext attendant_Data;
+
+        Customer customer;
+        Customer_DataDataContext customer_Data;
         //int currentID = default;
         login nv; 
         DataloginDataContext db; 
@@ -82,23 +85,26 @@ namespace CarParking
                         }
                         else if (i.role == "Attendant")
                         {
-                            try
-                            {
+                            
+                          
                                 attendant1 = new Attendant();
                                 attendant_Data = new Attendant_DataDataContext();
                               
                                     attendant1 = attendant_Data.Attendants.Where(m => m.Email == i.email).FirstOrDefault();
-                                    //MessageBox.Show(manager1.Id.ToString());
+                            //MessageBox.Show(manager1.Id.ToString());
+                            //MessageBox.Show("hello world");
+                            Attendant_form attendant_Form = new Attendant_form(attendant1.Id);
+                            attendant_Form.Show();
 
-                                    Attendant_form attendant_Form = new Attendant_form(attendant1.Id);
-                                    attendant_Form.Show();
-                             
-                            }
-                            catch (Exception ex)
-                            {
-                                //MessageBox.Show("Im here");
-                                //MessageBox.Show(ex.Message, "Error");
-                            }
+
+                        }
+                        else if (i.role == "Customer")
+                        {
+                            customer = new Customer();
+                            customer_Data = new Customer_DataDataContext();
+                            customer = customer_Data.Customers.Where(m => m.Email == i.email).FirstOrDefault();
+                            Customer_form customer_Form = new Customer_form(customer.Id);
+                            customer_Form.Show();
                         }
                     }
                     else
