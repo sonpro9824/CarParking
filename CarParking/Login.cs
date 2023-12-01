@@ -58,7 +58,7 @@ namespace CarParking
                     if (i != null)
                     {
                         //MessageBox.Show("Yeah sirrr");
-                        this.Hide();
+                        //this.Hide();
                         string output = "Welcome back, " + i.role;
                         MessageBox.Show(output, "Notice");
                         /* Welcome welcome = new Welcome();
@@ -167,8 +167,8 @@ namespace CarParking
                 }
                 if (text_passS.Text == text_passS2.Text)
                 {
-                   
-                    //nv.Id = randomNumber;
+                    Random randomNuber = new Random();
+                    nv.Id = randomNuber.Next(1, 10000).ToString();
                     nv.email = text_mailS.Text;
                     nv.user = text_userS.Text;
                     nv.pass = text_passS.Text;

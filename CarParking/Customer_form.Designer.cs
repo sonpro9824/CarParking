@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel_menu = new System.Windows.Forms.Panel();
-            this.pannel_logo = new System.Windows.Forms.FlowLayoutPanel();
-            this.title_label = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.PI_button = new System.Windows.Forms.Button();
+            this.pannel_logo = new System.Windows.Forms.FlowLayoutPanel();
+            this.title_label = new System.Windows.Forms.Label();
             this.panel_menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,24 +55,6 @@
             this.panel_menu.Name = "panel_menu";
             this.panel_menu.Size = new System.Drawing.Size(200, 450);
             this.panel_menu.TabIndex = 1;
-            // 
-            // pannel_logo
-            // 
-            this.pannel_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.pannel_logo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pannel_logo.Location = new System.Drawing.Point(0, 0);
-            this.pannel_logo.Name = "pannel_logo";
-            this.pannel_logo.Size = new System.Drawing.Size(200, 68);
-            this.pannel_logo.TabIndex = 1;
-            // 
-            // title_label
-            // 
-            this.title_label.AutoSize = true;
-            this.title_label.Location = new System.Drawing.Point(412, 19);
-            this.title_label.Name = "title_label";
-            this.title_label.Size = new System.Drawing.Size(118, 16);
-            this.title_label.TabIndex = 2;
-            this.title_label.Text = "Customer services";
             // 
             // button6
             // 
@@ -165,6 +147,24 @@
             this.PI_button.UseVisualStyleBackColor = true;
             this.PI_button.Click += new System.EventHandler(this.PI_button_Click);
             // 
+            // pannel_logo
+            // 
+            this.pannel_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.pannel_logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pannel_logo.Location = new System.Drawing.Point(0, 0);
+            this.pannel_logo.Name = "pannel_logo";
+            this.pannel_logo.Size = new System.Drawing.Size(200, 68);
+            this.pannel_logo.TabIndex = 1;
+            // 
+            // title_label
+            // 
+            this.title_label.AutoSize = true;
+            this.title_label.Location = new System.Drawing.Point(412, 19);
+            this.title_label.Name = "title_label";
+            this.title_label.Size = new System.Drawing.Size(118, 16);
+            this.title_label.TabIndex = 2;
+            this.title_label.Text = "Customer services";
+            // 
             // Customer_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -173,6 +173,7 @@
             this.Controls.Add(this.title_label);
             this.Controls.Add(this.panel_menu);
             this.Name = "Customer_form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer_form";
             this.Load += new System.EventHandler(this.Customer_form_Load);
             this.panel_menu.ResumeLayout(false);

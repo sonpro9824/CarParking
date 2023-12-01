@@ -30,6 +30,9 @@ namespace CarParking
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void Insertlogin(login instance);
+    partial void Updatelogin(login instance);
+    partial void Deletelogin(login instance);
     #endregion
 		
 		public DataloginDataContext() : 
@@ -72,10 +75,12 @@ namespace CarParking
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.login")]
-	public partial class login
+	public partial class login : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
-		private System.Nullable<int> _Id;
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _Id;
 		
 		private string _email;
 		
@@ -85,12 +90,29 @@ namespace CarParking
 		
 		private string _role;
 		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(string value);
+    partial void OnIdChanged();
+    partial void OnemailChanging(string value);
+    partial void OnemailChanged();
+    partial void OnuserChanging(string value);
+    partial void OnuserChanged();
+    partial void OnpassChanging(string value);
+    partial void OnpassChanged();
+    partial void OnroleChanging(string value);
+    partial void OnroleChanged();
+    #endregion
+		
 		public login()
 		{
+			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int")]
-		public System.Nullable<int> Id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string Id
 		{
 			get
 			{
@@ -100,7 +122,11 @@ namespace CarParking
 			{
 				if ((this._Id != value))
 				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
 					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
 				}
 			}
 		}
@@ -116,7 +142,11 @@ namespace CarParking
 			{
 				if ((this._email != value))
 				{
+					this.OnemailChanging(value);
+					this.SendPropertyChanging();
 					this._email = value;
+					this.SendPropertyChanged("email");
+					this.OnemailChanged();
 				}
 			}
 		}
@@ -132,7 +162,11 @@ namespace CarParking
 			{
 				if ((this._user != value))
 				{
+					this.OnuserChanging(value);
+					this.SendPropertyChanging();
 					this._user = value;
+					this.SendPropertyChanged("user");
+					this.OnuserChanged();
 				}
 			}
 		}
@@ -148,7 +182,11 @@ namespace CarParking
 			{
 				if ((this._pass != value))
 				{
+					this.OnpassChanging(value);
+					this.SendPropertyChanging();
 					this._pass = value;
+					this.SendPropertyChanged("pass");
+					this.OnpassChanged();
 				}
 			}
 		}
@@ -164,8 +202,32 @@ namespace CarParking
 			{
 				if ((this._role != value))
 				{
+					this.OnroleChanging(value);
+					this.SendPropertyChanging();
 					this._role = value;
+					this.SendPropertyChanged("role");
+					this.OnroleChanged();
 				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}

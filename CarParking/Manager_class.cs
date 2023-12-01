@@ -32,7 +32,6 @@ namespace CarParking
         /// <param name="manager_Information"></param>
         public static void Transfer_Manager_Detail(Manager db_manager, ref Manager_Information manager_Information)
         {
-
             manager_Information.ID1 = db_manager.Id;
             if (db_manager.First_Name != null)
                 manager_Information.First_name = db_manager.First_Name;

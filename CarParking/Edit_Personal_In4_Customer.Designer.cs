@@ -242,7 +242,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(581, 22);
             this.textBox3.TabIndex = 2;
-//            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.textBox3.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.textBox3_MouseDoubleClick);
             // 
             // textBox2
@@ -416,6 +415,7 @@
             this.Controls.Add(this.Save_button);
             this.Controls.Add(this.Edit_button);
             this.Name = "Edit_Personal_In4_Customer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit_Personal_In4_Customer";
             this.Load += new System.EventHandler(this.Edit_Personal_In4_Customer_Load);
             this.Edit_PI_panel.ResumeLayout(false);
