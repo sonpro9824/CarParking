@@ -8,10 +8,10 @@
     </TypeIdentifier>
   </Class>
   <Class Name="CarParking.Customer_Information">
-    <Position X="3.5" Y="4" Width="1.5" />
+    <Position X="5.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAARBAAAEAAAAAAAEAAAAAAAAAAAAAAAgAAABIAAAAQ=</HashCode>
-      <FileName>Customer.cs</FileName>
+      <HashCode>AAARBgAAEAAAAAAAEAAAAAAAAAAAAAAAgAAABIAAAAQ=</HashCode>
+      <FileName>Customer_class.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -26,24 +26,25 @@
     <Position X="3.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAEAAAACAAAABAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Manager.cs</FileName>
+      <FileName>Manager_class.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="CarParking.Attendant_Information">
-    <Position X="3.5" Y="8.25" Width="1.5" />
+    <Position X="3.5" Y="9" Width="1.5" />
     <InheritanceLine Type="CarParking.Person" FixedToPoint="true">
       <Path>
-        <Point X="2" Y="7.271" />
-        <Point X="2.3" Y="7.271" />
-        <Point X="2.3" Y="7.95" />
-        <Point X="4.25" Y="7.95" />
-        <Point X="4.25" Y="8.25" />
+        <Point X="1.25" Y="8.641" />
+        <Point X="1.25" Y="8.891" />
+        <Point X="2.25" Y="8.891" />
+        <Point X="2.25" Y="8.625" />
+        <Point X="4.25" Y="8.625" />
+        <Point X="4.25" Y="9" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAEAAAAEAAAAAAAAEAAQAACAAAAAAAAIAAABAAAAAAA=</HashCode>
-      <FileName>Attendant.cs</FileName>
+      <HashCode>AAEAAAAEAIAAAAAAEAAQAACAAAAAAAAIAAABAAAAAAA=</HashCode>
+      <FileName>Attendant_class.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>

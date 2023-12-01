@@ -120,6 +120,11 @@
     <Compile Include="Manage_Parking_Space.Designer.cs">
       <DependentUpon>Manage_Parking_Space.cs</DependentUpon>
     </Compile>
+    <Compile Include="pakingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pakingDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ParkCar.cs" />
     <Compile Include="ParkingSpace.cs" />
     <Compile Include="Parking_Car_Detail.designer.cs">
@@ -207,6 +212,17 @@
     </None>
     <None Include="Manager_Data.dbml.layout">
       <DependentUpon>Manager_Data.dbml</DependentUpon>
+    </None>
+    <None Include="pakingDataSet.xsc">
+      <DependentUpon>pakingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pakingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pakingDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pakingDataSet.xss">
+      <DependentUpon>pakingDataSet.xsd</DependentUpon>
     </None>
     <None Include="Parking_Car_Detail.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>

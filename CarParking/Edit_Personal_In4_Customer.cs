@@ -85,6 +85,12 @@ namespace CarParking
         }
         private bool Check_Valid_Input()
         {
+            var i = (from n in db.logins where n.email == textBox2.Text select n).FirstOrDefault();
+            if (i != null)
+            {
+                MessageBox.Show("The email has already exist!", "Notice");
+                return false;
+            }
             if (!Check_Valid_Phone_Number())
             {
                 return false;

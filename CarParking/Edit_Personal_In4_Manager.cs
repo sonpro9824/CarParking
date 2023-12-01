@@ -91,6 +91,12 @@ namespace CarParking
         }
         private bool Check_Valid_Input()
         {
+            var i = (from n in db.logins where n.email == textBox2.Text select n).FirstOrDefault();
+            if (i != null)
+            {
+                MessageBox.Show("The email has already exist!", "Notice");
+                return false;
+            }
             if (!Check_Valid_Phone_Number())
             {
                 return false;
@@ -120,8 +126,10 @@ namespace CarParking
 
             Email_Value_label.Text = textBox2.Text;
             manager_Information.Email = Email_Value_label.Text;
+
             Manager.Email = manager_Information.Email;
             dataContext.SubmitChanges();
+
             nv.email = manager_Information.Email;
             db.SubmitChanges();
 

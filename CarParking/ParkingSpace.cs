@@ -11,6 +11,7 @@ namespace CarParking
         bool status = false;   
         float price = default;
         string ID_car_using = string.Empty;
+        string ID_car_owner = string.Empty;
         DateTime date_come = new DateTime();
         DateTime date_leave = new DateTime();
         float revenue = default;
@@ -18,7 +19,7 @@ namespace CarParking
         
         public ParkingSpaceInformation() { }
 
-        public ParkingSpaceInformation(string iD, bool status, float price, string iD_car_using, DateTime date_come, DateTime date_leave, float revenue)
+        public ParkingSpaceInformation(string iD, bool status, float price, string iD_car_using, DateTime date_come, DateTime date_leave, float revenue, string iD_car_owner = null)
         {
             ID1 = iD;
             this.Status = status;
@@ -27,6 +28,7 @@ namespace CarParking
             this.Date_come = date_come;
             this.Date_leave = date_leave;
             this.Revenue = revenue;
+            ID_car_owner = iD_car_owner;
         }
 
         public string ID1 { get => ID; set => ID = value; }
@@ -36,5 +38,6 @@ namespace CarParking
         public DateTime Date_come { get => date_come; set => date_come = value; }
         public DateTime Date_leave { get => date_leave; set => date_leave = value; }
         public float Revenue { get => revenue; set => revenue = value; }
+        public string ID_car_owner1 { get => ID_car_owner; set => ID_car_owner = value; }
     }
 }
