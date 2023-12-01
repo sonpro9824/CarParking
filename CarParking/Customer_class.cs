@@ -12,6 +12,7 @@ namespace CarParking
         DateTime date_leave = new DateTime();
         string payment_method = string.Empty;
         public static bool[] check_ID_Customer = Enumerable.Repeat(true, 1000).ToArray();
+        List<Ticket_detail> list_ticket = new List<Ticket_detail>();  
         public Customer_Information()
         {
         }
@@ -19,6 +20,7 @@ namespace CarParking
         public Customer_Information(int iD, string first_name, string last_name, string sex, string email,
             string phone_number, string address, DateTime doB) : base(iD, first_name, last_name, sex, email, phone_number, address, doB)
         {
+
         }
 
         public string Car_ID { get => car_ID; set => car_ID = value; }

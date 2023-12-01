@@ -59,6 +59,12 @@
     <Compile Include="Attendant_form.Designer.cs">
       <DependentUpon>Attendant_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Attendant_Parking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendant_Parking.Designer.cs">
+      <DependentUpon>Attendant_Parking.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer_class.cs" />
     <Compile Include="Customer_Data.designer.cs">
       <AutoGen>True</AutoGen>
@@ -70,6 +76,31 @@
     </Compile>
     <Compile Include="Customer_form.Designer.cs">
       <DependentUpon>Customer_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data121DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data121DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data121DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data121DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data121DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data121DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data121DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data121DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data121DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data121DataSet4.xsd</DependentUpon>
     </Compile>
     <Compile Include="Datalogin.designer.cs">
       <AutoGen>True</AutoGen>
@@ -136,6 +167,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RetrieveCar.cs" />
+    <Compile Include="Ticket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket.Designer.cs">
+      <DependentUpon>Ticket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket_db.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ticket_db.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket_detail.cs" />
     <Compile Include="ViewReport.cs" />
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
@@ -145,6 +188,9 @@
     </Compile>
     <EmbeddedResource Include="Attendant_form.resx">
       <DependentUpon>Attendant_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendant_Parking.resx">
+      <DependentUpon>Attendant_Parking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer_form.resx">
       <DependentUpon>Customer_form.cs</DependentUpon>
@@ -177,6 +223,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Ticket.resx">
+      <DependentUpon>Ticket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +244,61 @@
     </None>
     <None Include="Customer_Data.dbml.layout">
       <DependentUpon>Customer_Data.dbml</DependentUpon>
+    </None>
+    <None Include="Data121DataSet.xsc">
+      <DependentUpon>Data121DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data121DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Data121DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data121DataSet.xss">
+      <DependentUpon>Data121DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data121DataSet1.xsc">
+      <DependentUpon>Data121DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Data121DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Data121DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data121DataSet1.xss">
+      <DependentUpon>Data121DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Data121DataSet2.xsc">
+      <DependentUpon>Data121DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Data121DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Data121DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data121DataSet2.xss">
+      <DependentUpon>Data121DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Data121DataSet3.xsc">
+      <DependentUpon>Data121DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Data121DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Data121DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data121DataSet3.xss">
+      <DependentUpon>Data121DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Data121DataSet4.xsc">
+      <DependentUpon>Data121DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Data121DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Data121DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data121DataSet4.xss">
+      <DependentUpon>Data121DataSet4.xsd</DependentUpon>
     </None>
     <None Include="Datalogin.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
@@ -241,6 +345,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Ticket_db.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Ticket_db.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ticket_db.dbml.layout">
+      <DependentUpon>Ticket_db.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

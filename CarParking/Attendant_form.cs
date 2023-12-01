@@ -32,5 +32,11 @@ namespace CarParking
         {
             attendant.PrinfDetail();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Attendant_Parking attendant_Parking = new Attendant_Parking();
+            attendant_Parking.Show();
+        }
     }
 }
