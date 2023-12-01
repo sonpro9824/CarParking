@@ -22,6 +22,7 @@ namespace CarParking
 
         public Customer_Information(int iD, string first_name, string last_name, string sex, string email, string phone_number, string address, DateTime doB) : base(iD, first_name, last_name, sex, email, phone_number, address, doB)
         {
+
         }
 
         public string Car_ID { get => car_ID; set => car_ID = value; }

@@ -77,5 +77,16 @@ namespace CarParking.Properties {
                 return ((string)(this["ParkingCarrrrConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-7TC6IQE;Initial Catalog=Data121;Integrated Security=True;Conn" +
+            "ect Timeout=30;Encrypt=False;TrustServerCertificate=False")]
+        public string Data121ConnectionString {
+            get {
+                return ((string)(this["Data121ConnectionString"]));
+            }
+        }
     }
 }

@@ -201,6 +201,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Ticket.resx">
+      <DependentUpon>Ticket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +222,61 @@
     </None>
     <None Include="Customer_Data.dbml.layout">
       <DependentUpon>Customer_Data.dbml</DependentUpon>
+    </None>
+    <None Include="Data121DataSet.xsc">
+      <DependentUpon>Data121DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data121DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Data121DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data121DataSet.xss">
+      <DependentUpon>Data121DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data121DataSet1.xsc">
+      <DependentUpon>Data121DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Data121DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Data121DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data121DataSet1.xss">
+      <DependentUpon>Data121DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Data121DataSet2.xsc">
+      <DependentUpon>Data121DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Data121DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Data121DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data121DataSet2.xss">
+      <DependentUpon>Data121DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Data121DataSet3.xsc">
+      <DependentUpon>Data121DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Data121DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Data121DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data121DataSet3.xss">
+      <DependentUpon>Data121DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Data121DataSet4.xsc">
+      <DependentUpon>Data121DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Data121DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Data121DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data121DataSet4.xss">
+      <DependentUpon>Data121DataSet4.xsd</DependentUpon>
     </None>
     <None Include="Datalogin.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>

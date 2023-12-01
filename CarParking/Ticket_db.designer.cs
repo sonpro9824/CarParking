@@ -92,6 +92,8 @@ namespace CarParking
 		
 		private System.Nullable<int> _Price;
 		
+		private System.Nullable<System.DateTime> _Time_Out;
+		
 		private string _Location_ID;
 		
 		private System.Nullable<System.DateTime> _time_in;
@@ -110,6 +112,12 @@ namespace CarParking
     partial void OnTicket_typeChanged();
     partial void OnIs_Entry_TicketChanging(System.Nullable<bool> value);
     partial void OnIs_Entry_TicketChanged();
+    partial void OnTime_InChanging(System.Nullable<System.DateTime> value);
+    partial void OnTime_InChanged();
+    partial void OnTime_OutChanging(System.Nullable<System.DateTime> value);
+    partial void OnTime_OutChanged();
+    partial void OnLocation_IDChanging(string value);
+    partial void OnLocation_IDChanged();
     partial void OnPriceChanging(System.Nullable<int> value);
     partial void OnPriceChanged();
     partial void OnLocation_IDChanging(string value);
