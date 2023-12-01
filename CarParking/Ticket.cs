@@ -23,11 +23,22 @@ namespace CarParking
         public Ticket(string ticket1,string owner)
         {
             InitializeComponent();
-            label_ticket.Text = ticket1;
-            label_owner.Text = owner;
-            customer = (from s in db_customer.Customers where s.Id == Convert.ToInt32(owner) select s).FirstOrDefault();
-            ticket = (from s in db_ticket.Waiting_Tickets where s.Ticket_ID == ticket1 select s).FirstOrDefault();
-            
+            try
+            {
+                label_ticket.Text = ticket1;
+                label_owner.Text = owner;
+                customer = (from s in db_customer.Customers where s.Id == Convert.ToInt32(owner) select s).FirstOrDefault();
+                ticket = (from s in db_ticket.Waiting_Tickets where s.Ticket_ID == ticket1 select s).FirstOrDefault();
+                label_location.Text = ticket.Location_ID;
+                label_in.Text = ticket.Time_In.ToString();
+                label_name.Text = customer.Last_Name + " " + customer.First_Name.ToString();
+                label_price.Text = ticket.Price.ToString();
+                label_type.Text = ticket.Ticket_type;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erorr");
+            }
         }
 
         private void Ticket_Load(object sender, EventArgs e)
