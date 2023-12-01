@@ -1,23 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 
 namespace CarParking
 {
     public class Customer_Information : Person, ParkCar, RetrieveCar, HandlePayment
     {
+        string Customer_ID = string.Empty;
         string car_ID = string.Empty;
         DateTime date_come = new DateTime();
         DateTime date_leave = new DateTime();
         string payment_method = string.Empty;
         public static bool[] check_ID_Customer = Enumerable.Repeat(true, 1000).ToArray();
+        List<Ticket_detail> ticket_Details = new List<Ticket_detail>();
+
         public Customer_Information()
         {
         }
 
-        public Customer_Information(int iD, string first_name, string last_name, string sex, string email,
-            string phone_number, string address, DateTime doB) : base(iD, first_name, last_name, sex, email, phone_number, address, doB)
+        public Customer_Information(int iD, string first_name, string last_name, string sex, string email, string phone_number, string address, DateTime doB) : base(iD, first_name, last_name, sex, email, phone_number, address, doB)
         {
         }
 
@@ -25,12 +28,33 @@ namespace CarParking
         public DateTime Date_come { get => date_come; set => date_come = value; }
         public DateTime Date_leave { get => date_leave; set => date_leave = value; }
         public string Payment_method { get => payment_method; set => payment_method = value; }
+        public List<Ticket_detail> Ticket_Details { get => ticket_Details; set => ticket_Details = value; }
+        public string Customer_ID1 { get => Customer_ID; set => Customer_ID = value; }
 
         public override void PrinfDetail()
         {
             Edit_Personal_In4_Customer edit_Personal = new Edit_Personal_In4_Customer(this);
             edit_Personal.Show();
         }
+        /// <summary>
+        /// Them ticket vo list
+        /// </summary>
+        /// <param name="ticket"></param>
+/*        public void Add_Ticket(Ticket_detail ticket)
+        {
+            ticket_Details.Add(ticket);
+        }
+        /// <summary>
+        /// tra ve tat ca ticket
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<Ticket_detail> Get_Ticket_()
+        {
+            foreach (var item in this.ticket_Details)
+            {
+                yield return item;
+            }
+        }*/
         public static void Transfer_Customer_Detail(Customer db_customer, ref Customer_Information customer_Information)
         {
 
@@ -69,6 +93,11 @@ namespace CarParking
                 db_customer.Phone_number = customer_Information.Phone_number;
             if (customer_Information.Address != null)
                 db_customer.Address = customer_Information.Address;
+        }
+
+        public void Parkcar(string role)
+        {
+            throw new NotImplementedException();
         }
     }
 }

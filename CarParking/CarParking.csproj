@@ -59,6 +59,12 @@
     <Compile Include="Attendant_form.Designer.cs">
       <DependentUpon>Attendant_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Create_new_ticket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create_new_ticket.Designer.cs">
+      <DependentUpon>Create_new_ticket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer_class.cs" />
     <Compile Include="Customer_Data.designer.cs">
       <AutoGen>True</AutoGen>
@@ -70,6 +76,12 @@
     </Compile>
     <Compile Include="Customer_form.Designer.cs">
       <DependentUpon>Customer_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_parking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_parking.Designer.cs">
+      <DependentUpon>Customer_parking.cs</DependentUpon>
     </Compile>
     <Compile Include="Datalogin.designer.cs">
       <AutoGen>True</AutoGen>
@@ -136,6 +148,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RetrieveCar.cs" />
+    <Compile Include="Ticket_db.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ticket_db.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket_detail.cs" />
     <Compile Include="ViewReport.cs" />
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
@@ -146,8 +164,14 @@
     <EmbeddedResource Include="Attendant_form.resx">
       <DependentUpon>Attendant_form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Create_new_ticket.resx">
+      <DependentUpon>Create_new_ticket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer_form.resx">
       <DependentUpon>Customer_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_parking.resx">
+      <DependentUpon>Customer_parking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edit_Personal_In4_Attendant.resx">
       <DependentUpon>Edit_Personal_In4_Attendant.cs</DependentUpon>
@@ -241,6 +265,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Ticket_db.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Ticket_db.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ticket_db.dbml.layout">
+      <DependentUpon>Ticket_db.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -103,13 +103,15 @@ namespace CarParking
             Edit_Personal_In4_Attendant edit_Personal = new Edit_Personal_In4_Attendant(this);
             edit_Personal.Show();
         }
-        public void ParkCar()
-        {
-            throw new Exception();
-        }
+       
         public void RetrieveCar()
         {
             throw new Exception();
+        }
+
+        public void Parkcar(string role)
+        {
+            throw new NotImplementedException();
         }
     }
 }

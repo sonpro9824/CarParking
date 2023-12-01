@@ -32,5 +32,11 @@ namespace CarParking
         {
 
         }
+
+        private void Park_car_button_Click(object sender, EventArgs e)
+        {
+            Customer_parking customer_Parking = new Customer_parking(customerInformation);
+            customer_Parking.Show();
+        }
     }
 }

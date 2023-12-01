@@ -2,10 +2,10 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Parking_Car_Detail">
   <DataContextMoniker Name="/Parking_Car_DetailDataContext" />
   <nestedChildShapes>
-    <classShape Id="85827e8a-d6fa-4a5c-8617-71137018ea08" absoluteBounds="3, 2.375, 2, 2.1554996744791666">
+    <classShape Id="6d1e0523-d7f0-4657-97ea-8e660ee989be" absoluteBounds="2.75, 2.75, 2, 2.1554996744791666">
       <DataClassMoniker Name="/Parking_Car_DetailDataContext/ParkingSpace" />
       <nestedChildShapes>
-        <elementListCompartment Id="0f85e758-240a-458b-b276-ce19723e8c3b" absoluteBounds="3.015, 2.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="b363dac6-7479-4d06-945c-2dfeaee5619a" absoluteBounds="2.765, 3.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>
